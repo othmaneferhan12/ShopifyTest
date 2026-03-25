@@ -19,14 +19,15 @@
 
 .barcoop-hero__swiper {
   width: 100%;
-  min-height: 80vh;
+  min-height: calc(100svh - 1.75rem);
+  max-height: 76vw;
 }
 
 .barcoop-hero__slide-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80vh;
+  min-height: calc(100svh - 1.75rem);
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;

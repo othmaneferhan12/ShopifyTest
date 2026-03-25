@@ -93,6 +93,16 @@
             heroSection.style.setProperty('--hero-text', textColor);
             heroSection.style.setProperty('--hero-accent', accentColor);
           }
+          /* Animate new bottle in on slide change */
+          if (typeof gsap !== 'undefined' && activeSlide) {
+            var bottle = activeSlide.querySelector('.barcoop-hero__bottle');
+            if (bottle) {
+              gsap.fromTo(bottle,
+                { scale: 0.85, opacity: 0, rotation: -5 },
+                { scale: 1, opacity: 1, rotation: 0, duration: 0.6, ease: 'power2.out' }
+              );
+            }
+          }
         },
         init: function() {
           var activeSlide = this.slides[this.activeIndex];
