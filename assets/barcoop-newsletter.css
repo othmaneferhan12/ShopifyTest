@@ -1,0 +1,110 @@
+/* ============================================
+   Barcoop Newsletter - "Stay in the Coop"
+   ============================================ */
+.barcoop-newsletter {
+  background-color: var(--barcoop--brand, #3a8075);
+  color: var(--barcoop--light, #fbf7e9);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.barcoop-newsletter__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.barcoop-newsletter__heading {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 900;
+  margin: 0 0 0.75rem;
+  color: var(--barcoop--light, #fbf7e9);
+}
+
+.barcoop-newsletter__subheading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  opacity: 0.85;
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+.barcoop-newsletter__form-group {
+  display: flex;
+  gap: 0;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.barcoop-newsletter__input {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9375rem;
+  background: var(--barcoop--light, #fbf7e9);
+  color: var(--barcoop--dark, #3d3d3d);
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  height: 3.5rem;
+}
+
+.barcoop-newsletter__input::placeholder {
+  color: var(--barcoop--dark, #3d3d3d);
+  opacity: 0.5;
+}
+
+.barcoop-newsletter__submit {
+  padding: 0.875rem 1.75rem;
+  background: var(--barcoop--dark, #3d3d3d);
+  color: var(--barcoop--light, #fbf7e9);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: all 150ms ease;
+  height: 3.5rem;
+  white-space: nowrap;
+}
+
+.barcoop-newsletter__submit:hover {
+  background: var(--barcoop--green-800, #3d655e);
+}
+
+.barcoop-newsletter__success {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  color: var(--barcoop--green-bright, #c1d544);
+}
+
+.barcoop-newsletter__error {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  color: var(--barcoop--yellow, #ffc517);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .barcoop-newsletter {
+    padding: 3rem 1.25rem;
+  }
+
+  .barcoop-newsletter__form-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .barcoop-newsletter__input {
+    border-radius: 8px;
+  }
+
+  .barcoop-newsletter__submit {
+    border-radius: 8px;
+  }
+}

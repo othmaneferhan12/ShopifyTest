@@ -1,0 +1,156 @@
+/* ============================================
+   Barcoop Product Showcase
+   ============================================ */
+.barcoop-showcase {
+  background-color: var(--barcoop--light, #fbf7e9);
+  padding: 4rem 2rem;
+}
+
+.barcoop-showcase__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.barcoop-showcase__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.barcoop-showcase__heading {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--barcoop--dark, #3d3d3d);
+  margin: 0 0 0.75rem;
+}
+
+.barcoop-showcase__subheading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--barcoop--dark, #3d3d3d);
+  opacity: 0.7;
+  margin: 0;
+}
+
+.barcoop-showcase__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.barcoop-showcase__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  background: transparent;
+}
+
+.barcoop-showcase__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.barcoop-showcase__card-image {
+  width: 160px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.barcoop-showcase__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 300ms ease;
+}
+
+.barcoop-showcase__card:hover .barcoop-showcase__card-image img {
+  transform: scale(1.14);
+}
+
+.barcoop-showcase__card-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--barcoop--dark, #3d3d3d);
+  margin: 0 0 0.5rem;
+}
+
+.barcoop-showcase__card-flavor {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8125rem;
+  color: var(--card-accent, #3a8075);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.barcoop-showcase__cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.barcoop-showcase__button {
+  display: inline-block;
+  padding: 0.875rem 2.5rem;
+  background-color: var(--barcoop--brand, #3a8075);
+  color: var(--barcoop--light, #fbf7e9);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 150ms ease;
+}
+
+.barcoop-showcase__button:hover {
+  background-color: var(--barcoop--dark, #3d3d3d);
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .barcoop-showcase__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .barcoop-showcase__card-image {
+    width: 140px;
+    height: 280px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .barcoop-showcase {
+    padding: 3rem 1.25rem;
+  }
+
+  .barcoop-showcase__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .barcoop-showcase__card {
+    padding: 1rem 0.5rem;
+  }
+
+  .barcoop-showcase__card-image {
+    width: 120px;
+    height: 240px;
+  }
+
+  .barcoop-showcase__card-title {
+    font-size: 1rem;
+  }
+}

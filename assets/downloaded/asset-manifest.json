@@ -1,0 +1,90 @@
+{
+  "bottles": {
+    "classic-margarita-bottle.png": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512ec68bef7b77ccbca8_660ffeb54d4e681eecbc52b1_CLASSIC_MARGARITA-bottle-shadow.png",
+    "bloody-mary-bottle.png": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512e46b6ec9921034243_660fff4abc9dfea627fc3ca1_BLOODY_MARY-bottle-shadow.png",
+    "cucumber-mojito-bottle.png": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512efa7f7487afe44b42_660fff7e3942f90b0ee03504_CUCUMBER_MOJITO-bottle-shadow.png",
+    "ginger-smash-bottle.png": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512e70aa1b59e1ceb57a_660ffef34de48cad8a2187cf_GINGER_SMASH-bottle-shadow.png",
+    "spicy-strawberry-marg-bottle.png": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512e827b7c6b3334e862_660fffc2668603d134f325ba_SPICY_STRAWBERRY_MARG-bottle-shadow.png",
+    "pina-colada-bottle.png": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512e50cbd80e6217c77d_660fff2c8b4fea7bbb9cc648_PINA_COLADA-bottle-shadow.png",
+    "cocktail-classic-marg.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/663bd3b514f35c0e4745ec07_cocktail-classic-marg.jpg",
+    "cocktail-bloody-mary.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/663bd3a4411aa49d3a63c0b4_cocktail-bloody-mary.jpg"
+  },
+  "recipes": {
+    "ginger-smash.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634bbe4d48ead95a287a25_Ginger%20Smash.jpg",
+    "non-alcoholic-strawberry-daiquiri.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c07c84dd0f77a53dae2_Non-Alcoholic%20Strawberry%20Daiquiri.jpg",
+    "michelada.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634be2952aadf09273de62_Michelada.jpg",
+    "cucumber-mint-spritz.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634b08f11b6d9710af8f86_Cucumber%20Mint%20Spritz.jpg",
+    "bloody-mary.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634897a3c364a78573c264_Bloody%20Mary.jpg",
+    "cucumber-mojito.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634b30449d48431e9255b4_Cucumber%20Mojito.jpg",
+    "sparkling-limeade.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c288d400a97086ac889_Sparkling%20Limeade.jpg",
+    "berry-sherry-cobbler.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6669bd452f97af4e7867625c_Berry%20Sherry%20Cobler%20v2.jpg",
+    "blue-coconut-colada.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634a20c576eb6374de4e7c_Blue%20Coconut%20Colada.jpg",
+    "cucumber-julep.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634adf43d887bf5ad00f2f_Cucumber%20Julep.jpg",
+    "mezcal-margarita.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634bd3c576eb6374df7ba8_Mezcal%20Margarita.jpg",
+    "frozen-strawberry-margarita.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6669b711faa5127a14b77151_Frozen%20Strawberry%20Margarita%20v2.jpg",
+    "cucumber-gin-fizz.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634acc5e77d97bb98301b8_Cucumber%20Gin%20Fiz.jpg",
+    "cucumber-mint-caipirinha.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634af41517fa00baafb559_Cucumber%20Mint%20Caipirinha.jpg",
+    "frozen-strawberry-daiquiri.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634b74c36891c89a4c4201_Frozen%20Strawberry%20Daiquiri.jpg",
+    "classic-margarita.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634a76af1dfe732dd13dd1_Classic%20Margarita.jpg",
+    "classic-daiquiri.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6669b7241779527cc6e012bd_Classic%20Daiquiri%20v2.jpg",
+    "spicy-strawberry-lime-soda.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6669b705bc7921b6f097316d_Spicy%20Strawberry%20Lime%20Soda%20-%20v3.jpg",
+    "colada-spritzer.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634aa676f1e7c61401b8b4_Colada%20Spritzer.jpg",
+    "vodka-gimlet.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c8691038cce2fc562af_Vodka%20Gimlet.jpg",
+    "bloody-maria.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634a3436e8dec3821f9fe1_Bloody%20Maria.jpg",
+    "ginger-margarita.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634ba908da8990c3ba88b9_Ginger%20Margarita.jpg",
+    "spicy-strawberry-margarita.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c478aa46c3556be1455_Spicy%20Strawberry%20Margarita.jpg",
+    "virgin-pina-colada.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c77bc5c1ba34ad80181_Virgin%20Pina%20Colada.jpg",
+    "cucumber-mint-swizzle.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634b1ce0b4534c209666c1_Cucumber%20Mint%20Swizzle.jpg",
+    "ginger-beer.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634b9e08da8990c3ba8225_Ginger%20Beer.jpg",
+    "strawberry-bourbon-smash.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c58979dd8b01256e196_Strawberry%20Bourbon%20Smash.jpg",
+    "perfect-pina-colada.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c164d48ead95a28ad0f_Perfect%20Pina%20Colada.jpg",
+    "coconut-margarita.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634a8533243c64206167d9_Coconut%20Margarita.jpg",
+    "moscow-mule.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634bf31517fa00bab067bc_Moscow%20Mule.jpg",
+    "dark-and-stormy.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634b57b5878abbe117c65d_Dark%20and%20Stormy.jpg",
+    "virgin-bloody-mary.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c68ef7cc9a6d2df40fe_Virgin%20Bloody%20Mary.jpg",
+    "frozen-margarita.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634b64c84dd0f77a534aba_Frozen%20Margarita.jpg"
+  },
+  "about": {
+    "about-ingredients.jpg": "https://cdn.prod.website-files.com/6614094ec46a8c211ee3efac/666b5ae00326da1700b407ed_about-ingredients.jpg",
+    "about-easy.jpg": "https://cdn.prod.website-files.com/6614094ec46a8c211ee3efac/666b5ae1c2211cb9d644c482_about-easy.jpg",
+    "about-craftsmen.jpg": "https://cdn.prod.website-files.com/6614094ec46a8c211ee3efac/666b5ae0df9ff76766b7e532_about-craftsmen.jpg"
+  },
+  "press": {
+    "nytimes-wirecutter.webp": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/671bd05e3746729a9c87ab6e_margaritamixes-2048px-6068.webp",
+    "boston-globe-bloody-mary.jpeg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66a11a42e1b2497a997d4cce_BloodyMary_BostonGlobe.jpeg",
+    "couple-business.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6699558fcae0082033b16fb7_Bittermilk_CLW-797.jpg",
+    "sfa-product-of-year.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/667ee532cfb99c72bd27c649_73_rfCdQ.jpg",
+    "golf-bloody-mary.webp": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66689965fad94e7b61fe63e5_bloody-mary.webp",
+    "charleston-makers.jpg": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/669955a6cdc8fc1bdf110fd3_Bittermilk_CLW-805.jpg"
+  },
+  "icons": {
+    "lime.svg": "ingredient icon",
+    "tangerine.svg": "ingredient icon",
+    "sugar-cane.svg": "ingredient icon",
+    "sea-salt.svg": "ingredient icon",
+    "tomato.svg": "ingredient icon",
+    "chile-pepper.svg": "ingredient icon",
+    "tequila.svg": "spirit icon",
+    "rum.svg": "spirit icon",
+    "vodka.svg": "spirit icon",
+    "light-beer.svg": "spirit icon",
+    "water-tag.svg": "spirit icon",
+    "soda-water-tag.svg": "spirit icon",
+    "ice-tag.svg": "decorative",
+    "head-classic-marg.svg": "product head icon",
+    "head-bloody-mary.svg": "product head icon",
+    "head-ginger-smash.svg": "product head icon",
+    "full-chicken-classic-marg.svg": "recipe illustration",
+    "full-chicken-bloody-mary.svg": "recipe illustration"
+  },
+  "logos": {
+    "barcoop-logo.jpg": "main brand logo",
+    "sofi-2024-product-of-year.svg": "award badge",
+    "sofi-gold-2024.png": "award badge",
+    "sip-silver-2023.jpg": "award badge",
+    "sofi-2018.png": "award badge"
+  },
+  "merch": {
+    "barcoop-hat-dark.jpg": "merchandise product"
+  }
+}

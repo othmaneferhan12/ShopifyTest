@@ -35,6 +35,18 @@
       {%- render 'theme-editor' -%}
     {% endif %}
 
+    <!-- Barcoop Bevy: Google Fonts (Open Sans + Merriweather) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Barcoop Bevy: Custom CSS -->
+    {{ 'custom-fonts.css' | asset_url | stylesheet_tag }}
+    {{ 'barcoop-custom.css' | asset_url | stylesheet_tag }}
+
+    <!-- Barcoop Bevy: Swiper.js for carousels -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     {{ content_for_header }}
   </head>
 
@@ -132,5 +144,22 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+
+    <!-- Barcoop Bevy: JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+
+    <!-- Barcoop Bevy: Initialize Lenis smooth scroll -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof Lenis !== 'undefined') {
+          const lenis = new Lenis({ duration: 1.2, easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });
+          function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+          requestAnimationFrame(raf);
+        }
+      });
+    </script>
   </body>
 </html>
