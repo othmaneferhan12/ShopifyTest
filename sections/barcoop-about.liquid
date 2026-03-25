@@ -1,0 +1,146 @@
+{{ 'barcoop-about.css' | asset_url | stylesheet_tag }}
+
+<section class="barcoop-about" data-section-id="{{ section.id }}">
+  <!-- Hero -->
+  <div class="barcoop-about__hero">
+    <h1 class="barcoop-about__hero-heading">{{ section.settings.heading }}</h1>
+    {%- if section.settings.subheading != blank -%}
+      <p class="barcoop-about__hero-subheading">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+  </div>
+
+  <!-- Content Blocks -->
+  {%- for block in section.blocks -%}
+    <div class="barcoop-about__section" {{ block.shopify_attributes }}>
+      <div class="barcoop-about__grid{% if forloop.index == 2 %} barcoop-about__grid--reverse{% endif %}">
+        <div class="barcoop-about__image">
+          {%- if block.settings.image != blank -%}
+            <img
+              src="{{ block.settings.image | image_url: width: 800 }}"
+              alt="{{ block.settings.title | escape }}"
+              width="600"
+              height="400"
+              loading="lazy"
+            >
+          {%- endif -%}
+        </div>
+        <div class="barcoop-about__content">
+          <h2 class="barcoop-about__content-title">{{ block.settings.title }}</h2>
+          <div class="barcoop-about__content-text">{{ block.settings.description }}</div>
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+
+  <!-- Awards -->
+  {%- if section.settings.awards_heading != blank -%}
+    <div class="barcoop-about__awards">
+      <h2 class="barcoop-about__awards-heading">{{ section.settings.awards_heading }}</h2>
+      <div class="barcoop-about__awards-grid">
+        {%- if section.settings.award_1 != blank -%}
+          <div class="barcoop-about__award">
+            <img src="{{ section.settings.award_1 | image_url: width: 240 }}" alt="Award" loading="lazy">
+          </div>
+        {%- endif -%}
+        {%- if section.settings.award_2 != blank -%}
+          <div class="barcoop-about__award">
+            <img src="{{ section.settings.award_2 | image_url: width: 240 }}" alt="Award" loading="lazy">
+          </div>
+        {%- endif -%}
+        {%- if section.settings.award_3 != blank -%}
+          <div class="barcoop-about__award">
+            <img src="{{ section.settings.award_3 | image_url: width: 240 }}" alt="Award" loading="lazy">
+          </div>
+        {%- endif -%}
+        {%- if section.settings.award_4 != blank -%}
+          <div class="barcoop-about__award">
+            <img src="{{ section.settings.award_4 | image_url: width: 240 }}" alt="Award" loading="lazy">
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Barcoop About",
+  "tag": "section",
+  "class": "barcoop-about-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "About Barcoop Bevy"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "All-natural cocktail mixers made by real bartenders in Charleston, South Carolina."
+    },
+    {
+      "type": "text",
+      "id": "awards_heading",
+      "label": "Awards Section Heading",
+      "default": "Award-Winning Mixers"
+    },
+    {
+      "type": "image_picker",
+      "id": "award_1",
+      "label": "Award Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "award_2",
+      "label": "Award Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "award_3",
+      "label": "Award Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "award_4",
+      "label": "Award Image 4"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Real Ingredients"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>We use only the finest all-natural ingredients in every bottle.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barcoop About",
+      "blocks": [
+        { "type": "content_block", "settings": { "title": "Real Ingredients", "description": "<p>We believe the best cocktails start with the best ingredients. Every Barcoop Bevy mixer is crafted with all-natural, premium ingredients — no artificial flavors, colors, or preservatives.</p>" } },
+        { "type": "content_block", "settings": { "title": "Made by Real Bartenders", "description": "<p>Our recipes are developed by experienced bartenders who know what makes a great cocktail. Each mixer is balanced and refined to deliver bar-quality drinks at home.</p>" } },
+        { "type": "content_block", "settings": { "title": "Easy to Use", "description": "<p>Just add your spirit of choice, pour over ice, and enjoy. It's that simple. No measuring, no muddling, no mess.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "barcoop_recipes_page": {
+      "type": "barcoop-recipes-page",
+      "blocks": {
+        "r_classic_marg": { "type": "recipe", "settings": { "title": "Classic Margarita", "spirit": "Tequila" } },
+        "r_dark_stormy": { "type": "recipe", "settings": { "title": "Dark and Stormy", "spirit": "Rum" } },
+        "r_vodka_gimlet": { "type": "recipe", "settings": { "title": "Vodka Gimlet", "spirit": "Vodka" } },
+        "r_spicy_marg": { "type": "recipe", "settings": { "title": "Spicy Strawberry Margarita", "spirit": "Tequila" } },
+        "r_moscow_mule": { "type": "recipe", "settings": { "title": "Moscow Mule", "spirit": "Vodka" } },
+        "r_cucumber_mojito": { "type": "recipe", "settings": { "title": "Cucumber Mojito", "spirit": "Rum" } },
+        "r_ginger_smash": { "type": "recipe", "settings": { "title": "Ginger Smash", "spirit": "Bourbon" } },
+        "r_bloody_mary": { "type": "recipe", "settings": { "title": "Bloody Mary", "spirit": "Vodka" } },
+        "r_pina_colada": { "type": "recipe", "settings": { "title": "Perfect Pina Colada", "spirit": "Rum" } },
+        "r_virgin_pina": { "type": "recipe", "settings": { "title": "Virgin Pina Colada", "spirit": "Non-Alcoholic" } },
+        "r_spicy_soda": { "type": "recipe", "settings": { "title": "Spicy Strawberry Lime Soda", "spirit": "Non-Alcoholic" } },
+        "r_frozen_marg": { "type": "recipe", "settings": { "title": "Frozen Margarita", "spirit": "Tequila" } }
+      },
+      "block_order": ["r_classic_marg", "r_dark_stormy", "r_vodka_gimlet", "r_spicy_marg", "r_moscow_mule", "r_cucumber_mojito", "r_ginger_smash", "r_bloody_mary", "r_pina_colada", "r_virgin_pina", "r_spicy_soda", "r_frozen_marg"],
+      "settings": {
+        "heading": "Recipes",
+        "subheading": "Discover cocktails and mocktails made with Barcoop Bevy mixers"
+      }
+    }
+  },
+  "order": ["barcoop_recipes_page"]
+}

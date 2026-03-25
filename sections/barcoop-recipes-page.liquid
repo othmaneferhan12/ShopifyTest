@@ -1,0 +1,120 @@
+{{ 'barcoop-recipes-page.css' | asset_url | stylesheet_tag }}
+
+<section class="barcoop-recipes-page" data-section-id="{{ section.id }}">
+  <div class="barcoop-recipes-page__inner">
+    {%- if section.settings.heading != blank -%}
+      <h1 class="barcoop-recipes-page__heading">{{ section.settings.heading }}</h1>
+    {%- endif -%}
+    {%- if section.settings.subheading != blank -%}
+      <p class="barcoop-recipes-page__subheading">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+
+    <div class="barcoop-recipes-page__filters">
+      <button class="barcoop-recipes-page__filter active" data-filter="all">All</button>
+      <button class="barcoop-recipes-page__filter" data-filter="tequila">Tequila</button>
+      <button class="barcoop-recipes-page__filter" data-filter="rum">Rum</button>
+      <button class="barcoop-recipes-page__filter" data-filter="vodka">Vodka</button>
+      <button class="barcoop-recipes-page__filter" data-filter="bourbon">Bourbon</button>
+      <button class="barcoop-recipes-page__filter" data-filter="gin">Gin</button>
+      <button class="barcoop-recipes-page__filter" data-filter="non-alcoholic">Non-Alcoholic</button>
+    </div>
+
+    <div class="barcoop-recipes-page__grid">
+      {%- for block in section.blocks -%}
+        <a href="{{ block.settings.link }}" class="barcoop-recipes-page__card" data-spirit="{{ block.settings.spirit | handleize }}" {{ block.shopify_attributes }}>
+          <div class="barcoop-recipes-page__card-image">
+            {%- if block.settings.image != blank -%}
+              <img
+                src="{{ block.settings.image | image_url: width: 500 }}"
+                alt="{{ block.settings.title | escape }}"
+                width="400"
+                height="400"
+                loading="lazy"
+              >
+            {%- endif -%}
+          </div>
+          <div class="barcoop-recipes-page__card-info">
+            <h3 class="barcoop-recipes-page__card-title">{{ block.settings.title }}</h3>
+            <p class="barcoop-recipes-page__card-spirit">{{ block.settings.spirit }}</p>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var filters = document.querySelectorAll('.barcoop-recipes-page__filter');
+    var cards = document.querySelectorAll('.barcoop-recipes-page__card');
+    filters.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filters.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.getAttribute('data-filter');
+        cards.forEach(function(card) {
+          if (filter === 'all' || card.getAttribute('data-spirit') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Barcoop Recipes Page",
+  "tag": "section",
+  "class": "barcoop-recipes-page-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Recipes"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Discover cocktails and mocktails made with Barcoop Bevy mixers"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "recipe",
+      "name": "Recipe",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Recipe Title"
+        },
+        {
+          "type": "text",
+          "id": "spirit",
+          "label": "Spirit Type"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Recipe Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Recipe Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barcoop Recipes Page"
+    }
+  ]
+}
+{% endschema %}
