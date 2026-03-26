@@ -1,21 +1,82 @@
-/* Custom Fonts for Barcoop Bevy Clone
-   Beverly and Nimbus Sans Extended are Adobe Typekit fonts.
-   To use them, you need a Typekit/Adobe Fonts subscription.
-   Add the Typekit embed code in theme.liquid <head> or use @font-face with licensed files.
+/* ==========================================================================
+   Mason's Custom Fonts
+   Self-hosted @font-face declarations for fonts not in Shopify's library.
+   Overrides Horizon theme CSS variables set by theme-styles-variables.liquid.
+   ========================================================================== */
 
-   Typekit Project ID (from source): loaded via Typekit.load()
-   Fonts used:
-   - Beverly (display/decorative headings)
-   - Nimbus Sans Extended (labels/subheadings)
+/* ── Helvetica Neue ────────────────────────────────────────────────────────── */
 
-   For now, we load via Adobe Fonts embed. Replace the kit ID with your own.
-*/
-
-/* Fallback: If Typekit is unavailable, approximate with available fonts */
-.font-beverly {
-  font-family: 'Beverly', 'Merriweather', serif;
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('HelveticaNeue-Roman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-.font-nimbus-extended {
-  font-family: 'nimbus-sans-extended', 'Open Sans', sans-serif;
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('HelveticaNeue-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('HelveticaNeue-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Bull-5 Typewriter (accent/monospace) ──────────────────────────────────── */
+
+@font-face {
+  font-family: 'Bull-5';
+  src: url('Bull-5-Typewriter.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Southera (display/decorative) ─────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'Southera';
+  src: url('Southera.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   CSS Variable Overrides
+   These override the Liquid-generated variables from theme-styles-variables.
+   Must load AFTER the theme's <style> block.
+   ========================================================================== */
+
+:root {
+  /* Body text — Helvetica Neue Roman (400) */
+  --font-body--family: 'Helvetica Neue', sans-serif;
+  --font-body--style: normal;
+  --font-body--weight: 400;
+
+  /* Subheadings — Helvetica Neue Medium (500) */
+  --font-subheading--family: 'Helvetica Neue', sans-serif;
+  --font-subheading--style: normal;
+  --font-subheading--weight: 500;
+
+  /* Headings H1-H2 — Helvetica Neue Medium (500), monospace fallback per source */
+  --font-heading--family: 'Helvetica Neue', monospace;
+  --font-heading--style: normal;
+  --font-heading--weight: 500;
+
+  /* Accent — Bull-5 Typewriter (400) */
+  --font-accent--family: 'Bull-5', monospace;
+  --font-accent--style: normal;
+  --font-accent--weight: 400;
+
+  /* Southera display font (used via direct class/custom sections) */
+  --southera: 'Southera';
 }
