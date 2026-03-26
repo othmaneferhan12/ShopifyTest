@@ -82,3 +82,52 @@ New Customer Accounts are Shopify-hosted — no Liquid templates to customize. C
 3. No custom Liquid templates needed (pages hosted by Shopify)
 
 **Note:** The source store's customer account pages have minimal custom branding — standard Shopify-hosted experience. Full visual match expected with the branding settings above.
+
+---
+
+## Phase 5.7 — Customer Data Migration
+
+### Status: SKIPPED — NO SOURCE ADMIN API
+
+Customer data: not migrated — no Admin API access to source store. Customers must register fresh on the clone.
+
+---
+
+## Phase 5.8 — Shopify Flow Automations
+
+### Status: CANNOT EXTRACT — NO SOURCE ADMIN API
+
+Shopify Flow: workflows not accessible without source store Admin API.
+Action required: manually list all active Flow workflows from the source store admin (if access can be obtained) and recreate them in target store admin > Apps > Flow.
+
+**Indirect Flow signals detected from product tags:**
+- **Automated tagging system**: Products use structured tags with prefixes (COLOR:, GENDER:, MODEL:, FIT:, SEASON:, SKU:, STYLE:, TYPE1:, TYPE2:, MAIN COLLECTION:). This suggests Flow or a tag automation app auto-tags products on creation.
+- **Seasonal/promo tags**: `FW25`, `Estivo`, `Invernale`, `Promo FW25`, `SALDI30`, `NEW1`–`NEW6`, `NEWW`–`NEWW9` — likely Flow-driven for automated collection membership.
+- **Channel tags**: `ZALANDO` (261 products), `NOFEED` (9 products) — suggests Flow routes products to marketplace feeds.
+- **Merchandising tags**: `TRAD 1`–`TRAD 21` — likely controls sort order or display position.
+- **Promo tags**: `PROMO1`, `LC20`, `LC60`, `SS25 30`, `SS25 40` — likely triggers discount automation.
+
+**Recommendation:** Recreate these tag-based automations in target store via Shopify Flow after obtaining source admin access or documenting the rules manually.
+
+---
+
+## Phase 5.9 — Email Notification Templates
+
+### Status: REQUIRES MANUAL BRANDING
+
+Target store email sender: `othmanferhan552@gmail.com`
+Target store domain: `shoopify-test.myshopify.com`
+
+**Action required — customize in target admin > Settings > Notifications:**
+
+1. **Order confirmation**: Update logo to Mason's logo, set brand colors (#222222 primary, #FF5031 accent)
+2. **Shipping confirmation**: Match tracking link format, include Mason's branding
+3. **Abandoned checkout**: Add Mason's brand voice, include discount code if applicable
+4. **Customer account welcome**: Match onboarding flow with Mason's branding
+5. **All templates**: Replace default Shopify logo with `masons-clothing-logo-text.png`
+
+**Transactional email domain:**
+- Current sender: `othmanferhan552@gmail.com` (Gmail — no custom domain)
+- For production: configure a custom sending domain (e.g., `noreply@[yourdomain].com`)
+- Verify SPF, DKIM, DMARC DNS records for the sending domain
+- Configure in admin > Settings > Notifications > Sender email
