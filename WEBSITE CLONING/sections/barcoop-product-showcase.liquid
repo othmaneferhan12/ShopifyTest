@@ -1,0 +1,133 @@
+{{ 'barcoop-product-showcase.css' | asset_url | stylesheet_tag }}
+
+<section class="barcoop-showcase" data-section-id="{{ section.id }}">
+  <div class="barcoop-showcase__inner">
+    {%- if section.settings.heading != blank -%}
+      <div class="barcoop-showcase__header">
+        <h2 class="barcoop-showcase__heading">{{ section.settings.heading }}</h2>
+        {%- if section.settings.subheading != blank -%}
+          <p class="barcoop-showcase__subheading">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="barcoop-showcase__grid">
+      {%- for block in section.blocks -%}
+        <a
+          href="{{ block.settings.link }}"
+          class="barcoop-showcase__card"
+          style="--card-accent: {{ block.settings.accent_color }};"
+          {{ block.shopify_attributes }}
+        >
+          <div class="barcoop-showcase__card-image">
+            {%- if block.settings.image != blank -%}
+              <img
+                src="{{ block.settings.image | image_url: width: 400 }}"
+                alt="{{ block.settings.title | escape }}"
+                width="200"
+                height="400"
+                loading="lazy"
+              >
+            {%- endif -%}
+          </div>
+          <div class="barcoop-showcase__card-info">
+            <h3 class="barcoop-showcase__card-title">{{ block.settings.title }}</h3>
+            {%- if block.settings.flavor != blank -%}
+              <p class="barcoop-showcase__card-flavor">{{ block.settings.flavor }}</p>
+            {%- endif -%}
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.button_label != blank -%}
+      <div class="barcoop-showcase__cta">
+        <a href="{{ section.settings.button_link }}" class="barcoop-showcase__button">
+          {{ section.settings.button_label }}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Barcoop Product Showcase",
+  "tag": "section",
+  "class": "barcoop-showcase-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Meet The Cocktail Coop"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "All-natural cocktail mixers made by real bartenders"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Shop All Mixers"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product Title",
+          "default": "Classic Margarita"
+        },
+        {
+          "type": "text",
+          "id": "flavor",
+          "label": "Flavor Description",
+          "default": "Lime + Tangerine + Sea Salt"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Bottle Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Product Link"
+        },
+        {
+          "type": "color",
+          "id": "accent_color",
+          "label": "Accent Color",
+          "default": "#c1d544"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barcoop Product Showcase",
+      "blocks": [
+        { "type": "product_card", "settings": { "title": "Classic Margarita", "accent_color": "#c1d544" } },
+        { "type": "product_card", "settings": { "title": "Bloody Mary", "accent_color": "#ef4a23" } },
+        { "type": "product_card", "settings": { "title": "Cucumber Mojito", "accent_color": "#3a8075" } },
+        { "type": "product_card", "settings": { "title": "Ginger Smash", "accent_color": "#765f2c" } },
+        { "type": "product_card", "settings": { "title": "Spicy Strawberry Margarita", "accent_color": "#fa3c30" } },
+        { "type": "product_card", "settings": { "title": "Piña Colada", "accent_color": "#765f2c" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

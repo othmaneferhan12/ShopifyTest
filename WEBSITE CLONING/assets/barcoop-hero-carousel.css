@@ -1,0 +1,201 @@
+/* ============================================
+   Barcoop Hero Carousel
+   ============================================ */
+.barcoop-hero {
+  --hero-bg: #3a8075;
+  --hero-text: #fbf7e9;
+  --hero-accent: #c1d544;
+  background-color: var(--hero-bg);
+  color: var(--hero-text);
+  transition: background-color 500ms ease, color 500ms ease;
+  overflow: hidden;
+}
+
+.barcoop-hero__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.barcoop-hero__swiper {
+  width: 100%;
+  min-height: calc(100svh - 1.75rem);
+  max-height: 76vw;
+}
+
+.barcoop-hero__slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100svh - 1.75rem);
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.barcoop-hero__text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.barcoop-hero__subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.barcoop-hero__title {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+  color: var(--hero-text);
+}
+
+.barcoop-hero__button {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: var(--hero-text);
+  color: var(--hero-bg);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 150ms ease;
+}
+
+.barcoop-hero__button:hover {
+  background-color: var(--hero-accent);
+  color: #3d3d3d;
+}
+
+.barcoop-hero__image-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.barcoop-hero__bottle {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+  transition: transform 300ms ease;
+}
+
+.barcoop-hero__bottle:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Controls */
+.barcoop-hero__controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 10;
+}
+
+.barcoop-hero__pagination {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.barcoop-hero__pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--hero-text);
+  opacity: 0.4;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 200ms ease;
+}
+
+.barcoop-hero__pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.barcoop-hero__nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.barcoop-hero__prev,
+.barcoop-hero__next {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--hero-text);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--hero-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 150ms ease;
+  opacity: 0.6;
+}
+
+.barcoop-hero__prev:hover,
+.barcoop-hero__next:hover {
+  opacity: 1;
+  background: var(--hero-text);
+  color: var(--hero-bg);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .barcoop-hero__swiper {
+    min-height: 100vh;
+  }
+
+  .barcoop-hero__slide-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    padding: 2rem 1.25rem;
+    min-height: 100vh;
+  }
+
+  .barcoop-hero__text {
+    max-width: 100%;
+  }
+
+  .barcoop-hero__image-wrapper {
+    max-width: 250px;
+  }
+
+  .barcoop-hero__title {
+    font-size: 2rem;
+  }
+
+  .barcoop-hero__controls {
+    bottom: 1.5rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .barcoop-hero__slide-content {
+    padding: 3rem 1.5rem;
+  }
+
+  .barcoop-hero__image-wrapper {
+    max-width: 280px;
+  }
+}

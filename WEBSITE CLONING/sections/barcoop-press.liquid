@@ -1,0 +1,87 @@
+{{ 'barcoop-press.css' | asset_url | stylesheet_tag }}
+
+<section class="barcoop-press" data-section-id="{{ section.id }}">
+  <div class="barcoop-press__inner">
+    {%- if section.settings.heading != blank -%}
+      <h1 class="barcoop-press__heading">{{ section.settings.heading }}</h1>
+    {%- endif -%}
+
+    <div class="barcoop-press__grid">
+      {%- for block in section.blocks -%}
+        <a href="{{ block.settings.link }}" class="barcoop-press__card" target="_blank" rel="noopener" {{ block.shopify_attributes }}>
+          <div class="barcoop-press__card-image">
+            {%- if block.settings.image != blank -%}
+              <img
+                src="{{ block.settings.image | image_url: width: 600 }}"
+                alt="{{ block.settings.source | escape }}"
+                width="600"
+                height="375"
+                loading="lazy"
+              >
+            {%- endif -%}
+          </div>
+          <div class="barcoop-press__card-info">
+            <p class="barcoop-press__card-source">{{ block.settings.source }}</p>
+            <h3 class="barcoop-press__card-title">{{ block.settings.title }}</h3>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Barcoop Press",
+  "tag": "section",
+  "class": "barcoop-press-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Press"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "press_item",
+      "name": "Press Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "source",
+          "label": "Publication",
+          "default": "The New York Times"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Article Title",
+          "default": "Best Margarita Mixers"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Article Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Article Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barcoop Press",
+      "blocks": [
+        { "type": "press_item", "settings": { "source": "NYT Wirecutter", "title": "The Best Margarita Mixes" } },
+        { "type": "press_item", "settings": { "source": "Boston Globe", "title": "Best Bloody Mary Mixers" } },
+        { "type": "press_item", "settings": { "source": "Golf Digest", "title": "Top Cocktail Mixers for the Course" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

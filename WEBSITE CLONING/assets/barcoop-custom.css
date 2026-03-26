@@ -1,0 +1,96 @@
+/* ============================================
+   Barcoop Bevy — Custom CSS Overrides
+   Source: barcoopbevy.com (Webflow)
+   Target: Shopify Horizon theme
+   ============================================ */
+
+/* --- Design Tokens (CSS Custom Properties) --- */
+:root {
+  /* Brand Colors */
+  --barcoop--brand: #3a8075;
+  --barcoop--green-dark: #3a8075;
+  --barcoop--green-bright: #c1d544;
+  --barcoop--green: #259e7e;
+  --barcoop--green-800: #3d655e;
+  --barcoop--green-light: #95cc7d;
+  --barcoop--dark: #3d3d3d;
+  --barcoop--light: #fbf7e9;
+  --barcoop--tan: #cdbd81;
+  --barcoop--cream: #fff7c5;
+  --barcoop--purple: #592f41;
+  --barcoop--yellow: #ffc517;
+  --barcoop--orange: #f85a35;
+  --barcoop--brown: #765f2c;
+  --barcoop--red-strawberry: #fa3c30;
+  --barcoop--red-tomato: #ef4a23;
+  --barcoop--sand-200: #fffefa;
+  --barcoop--sand-300: #fefcf5;
+  --barcoop--sand-400: #fbf7e9;
+  --barcoop--sand-500: #f3eedd;
+  --barcoop--dark-fade: #22222033;
+
+  /* Product-specific accent colors */
+  --product--classic-margarita: #c1d544;
+  --product--bloody-mary: #ef4a23;
+  --product--cucumber-mojito: #3a8075;
+  --product--ginger-smash: #765f2c;
+  --product--spicy-strawberry: #fa3c30;
+  --product--pina-colada: #765f2c;
+
+  /* Spacing tokens (matching source) */
+  --padding-horizontal--main: 2rem;
+  --padding-vertical--small: 2rem;
+  --padding-vertical--main: 4rem;
+  --padding-vertical--large: 6rem;
+}
+
+/* --- Tablet breakpoint --- */
+@media (max-width: 991px) {
+  :root {
+    --padding-horizontal--main: 1.5rem;
+    --padding-vertical--small: 1.5rem;
+  }
+}
+
+/* --- Mobile breakpoint --- */
+@media (max-width: 767px) {
+  :root {
+    --padding-horizontal--main: 1.25rem;
+    --padding-vertical--small: 1.25rem;
+  }
+}
+
+/* --- Global Body --- */
+body {
+  background-color: var(--barcoop--light);
+  color: var(--barcoop--dark);
+}
+
+/* --- Button hover transitions (matching source: all 150ms ease) --- */
+.button,
+.shopify-challenge__button,
+button[type="submit"] {
+  transition: all 150ms ease;
+}
+
+/* --- Product card hover scale (matching source: scale 1.14) --- */
+.product-card:hover img,
+.card:hover img {
+  transform: scale(1.14);
+  transition: transform 300ms ease;
+}
+
+.product-card img,
+.card img {
+  transition: transform 300ms ease;
+}
+
+/* --- Link styles --- */
+a {
+  color: var(--barcoop--brand);
+  transition: color 150ms ease;
+}
+
+a:hover {
+  color: var(--barcoop--green-800);
+}

@@ -1,0 +1,210 @@
+{{ 'barcoop-hero-carousel.css' | asset_url | stylesheet_tag }}
+
+<section
+  class="barcoop-hero"
+  id="barcoop-hero"
+  data-section-id="{{ section.id }}"
+>
+  <div class="barcoop-hero__inner">
+    <div class="swiper barcoop-hero__swiper">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div
+            class="swiper-slide barcoop-hero__slide"
+            data-color="{{ block.settings.accent_color }}"
+            data-bg-color="{{ block.settings.bg_color }}"
+            data-text-color="{{ block.settings.text_color }}"
+            {{ block.shopify_attributes }}
+          >
+            <div class="barcoop-hero__slide-content">
+              <div class="barcoop-hero__text">
+                {%- if block.settings.subtitle != blank -%}
+                  <p class="barcoop-hero__subtitle">{{ block.settings.subtitle }}</p>
+                {%- endif -%}
+                <h1 class="barcoop-hero__title">{{ block.settings.title }}</h1>
+                {%- if block.settings.button_label != blank -%}
+                  <a href="{{ block.settings.button_link }}" class="barcoop-hero__button">
+                    {{ block.settings.button_label }}
+                  </a>
+                {%- endif -%}
+              </div>
+              <div class="barcoop-hero__image-wrapper">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 600 }}"
+                    alt="{{ block.settings.title | escape }}"
+                    class="barcoop-hero__bottle"
+                    width="300"
+                    height="600"
+                    loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                  >
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="barcoop-hero__controls">
+        <div class="barcoop-hero__pagination"></div>
+        <div class="barcoop-hero__nav">
+          <button class="barcoop-hero__prev" aria-label="Previous product">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="barcoop-hero__next" aria-label="Next product">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Swiper === 'undefined') return;
+
+    const heroSection = document.getElementById('barcoop-hero');
+    const heroSwiper = new Swiper('.barcoop-hero__swiper', {
+      loop: true,
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      speed: 500,
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      pagination: {
+        el: '.barcoop-hero__pagination',
+        clickable: true,
+        renderBullet: function(index, className) {
+          return '<span class="' + className + '"></span>';
+        }
+      },
+      navigation: {
+        nextEl: '.barcoop-hero__next',
+        prevEl: '.barcoop-hero__prev'
+      },
+      on: {
+        slideChange: function() {
+          var activeSlide = this.slides[this.activeIndex];
+          if (activeSlide && heroSection) {
+            var bgColor = activeSlide.getAttribute('data-bg-color');
+            var textColor = activeSlide.getAttribute('data-text-color');
+            var accentColor = activeSlide.getAttribute('data-color');
+            heroSection.style.setProperty('--hero-bg', bgColor);
+            heroSection.style.setProperty('--hero-text', textColor);
+            heroSection.style.setProperty('--hero-accent', accentColor);
+          }
+          /* Animate new bottle in on slide change */
+          if (typeof gsap !== 'undefined' && activeSlide) {
+            var bottle = activeSlide.querySelector('.barcoop-hero__bottle');
+            if (bottle) {
+              gsap.fromTo(bottle,
+                { scale: 0.85, opacity: 0, rotation: -5 },
+                { scale: 1, opacity: 1, rotation: 0, duration: 0.6, ease: 'power2.out' }
+              );
+            }
+          }
+        },
+        init: function() {
+          var activeSlide = this.slides[this.activeIndex];
+          if (activeSlide && heroSection) {
+            heroSection.style.setProperty('--hero-bg', activeSlide.getAttribute('data-bg-color'));
+            heroSection.style.setProperty('--hero-text', activeSlide.getAttribute('data-text-color'));
+            heroSection.style.setProperty('--hero-accent', activeSlide.getAttribute('data-color'));
+          }
+        }
+      }
+    });
+
+    /* GSAP bottle entrance animation */
+    if (typeof gsap !== 'undefined') {
+      gsap.from('.barcoop-hero__bottle', {
+        scale: 0.8,
+        opacity: 0,
+        rotation: -5,
+        duration: 0.8,
+        ease: 'power2.out',
+        stagger: 0.1
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Barcoop Hero Carousel",
+  "tag": "section",
+  "class": "barcoop-hero-section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Product Slide",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product Title",
+          "default": "Classic Margarita"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Cocktail Mixer"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Bottle Image"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "color",
+          "id": "accent_color",
+          "label": "Accent Color",
+          "default": "#c1d544"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color",
+          "default": "#3a8075"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#fbf7e9"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barcoop Hero Carousel",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Classic Margarita",
+            "subtitle": "Cocktail Mixer",
+            "accent_color": "#c1d544",
+            "bg_color": "#3a8075",
+            "text_color": "#fbf7e9"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

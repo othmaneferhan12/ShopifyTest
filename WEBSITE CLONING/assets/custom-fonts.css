@@ -1,0 +1,21 @@
+/* Custom Fonts for Barcoop Bevy Clone
+   Beverly and Nimbus Sans Extended are Adobe Typekit fonts.
+   To use them, you need a Typekit/Adobe Fonts subscription.
+   Add the Typekit embed code in theme.liquid <head> or use @font-face with licensed files.
+
+   Typekit Project ID (from source): loaded via Typekit.load()
+   Fonts used:
+   - Beverly (display/decorative headings)
+   - Nimbus Sans Extended (labels/subheadings)
+
+   For now, we load via Adobe Fonts embed. Replace the kit ID with your own.
+*/
+
+/* Fallback: If Typekit is unavailable, approximate with available fonts */
+.font-beverly {
+  font-family: 'Beverly', 'Merriweather', serif;
+}
+
+.font-nimbus-extended {
+  font-family: 'nimbus-sans-extended', 'Open Sans', sans-serif;
+}

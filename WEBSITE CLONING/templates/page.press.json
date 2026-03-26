@@ -1,0 +1,49 @@
+{
+  "sections": {
+    "barcoop_press": {
+      "type": "barcoop-press",
+      "blocks": {
+        "press_wirecutter": {
+          "type": "press_item",
+          "settings": {
+            "source": "NYT Wirecutter",
+            "title": "The Best Margarita Mixes"
+          }
+        },
+        "press_boston": {
+          "type": "press_item",
+          "settings": {
+            "source": "Boston Globe",
+            "title": "Best Bloody Mary Mixers"
+          }
+        },
+        "press_golf": {
+          "type": "press_item",
+          "settings": {
+            "source": "Golf Digest",
+            "title": "Top Cocktail Mixers"
+          }
+        },
+        "press_sfa": {
+          "type": "press_item",
+          "settings": {
+            "source": "Specialty Food Association",
+            "title": "2024 Product of the Year"
+          }
+        },
+        "press_charleston": {
+          "type": "press_item",
+          "settings": {
+            "source": "Charleston Magazine",
+            "title": "Local Makers to Watch"
+          }
+        }
+      },
+      "block_order": ["press_wirecutter", "press_boston", "press_golf", "press_sfa", "press_charleston"],
+      "settings": {
+        "heading": "Press"
+      }
+    }
+  },
+  "order": ["barcoop_press"]
+}

@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "barcoop_about": {
+      "type": "barcoop-about",
+      "blocks": {
+        "block_ingredients": {
+          "type": "content_block",
+          "settings": {
+            "title": "Real Ingredients",
+            "description": "<p>We believe the best cocktails start with the best ingredients. Every Barcoop Bevy mixer is crafted with all-natural, premium ingredients — no artificial flavors, colors, or preservatives.</p>"
+          }
+        },
+        "block_craftsmen": {
+          "type": "content_block",
+          "settings": {
+            "title": "Made by Real Bartenders",
+            "description": "<p>Our recipes are developed by experienced bartenders who know what makes a great cocktail. Each mixer is balanced and refined to deliver bar-quality drinks at home.</p>"
+          }
+        },
+        "block_easy": {
+          "type": "content_block",
+          "settings": {
+            "title": "Easy to Use",
+            "description": "<p>Just add your spirit of choice, pour over ice, and enjoy. It's that simple. No measuring, no muddling, no mess.</p>"
+          }
+        }
+      },
+      "block_order": ["block_ingredients", "block_craftsmen", "block_easy"],
+      "settings": {
+        "heading": "About Barcoop Bevy",
+        "subheading": "All-natural cocktail mixers made by real bartenders in Charleston, South Carolina.",
+        "awards_heading": "Award-Winning Mixers"
+      }
+    }
+  },
+  "order": ["barcoop_about"]
+}

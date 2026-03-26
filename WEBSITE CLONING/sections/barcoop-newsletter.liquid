@@ -1,0 +1,88 @@
+{{ 'barcoop-newsletter.css' | asset_url | stylesheet_tag }}
+
+<section class="barcoop-newsletter" data-section-id="{{ section.id }}">
+  <div class="barcoop-newsletter__inner">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="barcoop-newsletter__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.subheading != blank -%}
+      <p class="barcoop-newsletter__subheading">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+
+    {% form 'customer', class: 'barcoop-newsletter__form' %}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class="barcoop-newsletter__form-group">
+        <input
+          type="email"
+          name="contact[email]"
+          id="newsletter-email-{{ section.id }}"
+          class="barcoop-newsletter__input"
+          placeholder="{{ section.settings.placeholder }}"
+          required
+          autocomplete="email"
+          aria-label="Email address"
+        >
+        <button type="submit" class="barcoop-newsletter__submit">
+          {{ section.settings.button_label }}
+        </button>
+      </div>
+      {%- if form.posted_successfully? -%}
+        <p class="barcoop-newsletter__success">Thank you! Your submission has been received!</p>
+      {%- endif -%}
+      {%- if form.errors -%}
+        <p class="barcoop-newsletter__error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
+      {%- endif -%}
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Barcoop Newsletter",
+  "tag": "section",
+  "class": "barcoop-newsletter-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Stay in the Coop"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Get exclusive recipes, news, and offers delivered to your inbox."
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Input Placeholder",
+      "default": "Enter your email"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Sign Up"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#3a8075"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#fbf7e9"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barcoop Newsletter"
+    }
+  ]
+}
+{% endschema %}

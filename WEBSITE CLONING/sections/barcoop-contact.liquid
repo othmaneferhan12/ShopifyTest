@@ -1,0 +1,80 @@
+{{ 'barcoop-contact.css' | asset_url | stylesheet_tag }}
+
+<section class="barcoop-contact" data-section-id="{{ section.id }}">
+  <div class="barcoop-contact__inner">
+    {%- if section.settings.heading != blank -%}
+      <h1 class="barcoop-contact__heading">{{ section.settings.heading }}</h1>
+    {%- endif -%}
+    {%- if section.settings.subheading != blank -%}
+      <p class="barcoop-contact__subheading">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+
+    {% form 'contact', class: 'barcoop-contact__form' %}
+      {%- if form.posted_successfully? -%}
+        <p style="color: var(--barcoop--brand); font-weight: 600; text-align: center;">Thanks for reaching out! We'll get back to you soon.</p>
+      {%- endif -%}
+
+      {%- if form.errors -%}
+        <div style="color: #fa3c30; text-align: center;">
+          {{ form.errors | default_errors }}
+        </div>
+      {%- endif -%}
+
+      <div class="barcoop-contact__row">
+        <div class="barcoop-contact__field">
+          <label class="barcoop-contact__label" for="contact-name">Name</label>
+          <input type="text" name="contact[name]" id="contact-name" class="barcoop-contact__input" placeholder="Your name" required>
+        </div>
+        <div class="barcoop-contact__field">
+          <label class="barcoop-contact__label" for="contact-email">Email</label>
+          <input type="email" name="contact[email]" id="contact-email" class="barcoop-contact__input" placeholder="your@email.com" required>
+        </div>
+      </div>
+
+      <div class="barcoop-contact__field">
+        <label class="barcoop-contact__label" for="contact-subject">Subject</label>
+        <input type="text" name="contact[subject]" id="contact-subject" class="barcoop-contact__input" placeholder="How can we help?">
+      </div>
+
+      <div class="barcoop-contact__field">
+        <label class="barcoop-contact__label" for="contact-message">Message</label>
+        <textarea name="contact[body]" id="contact-message" class="barcoop-contact__textarea" placeholder="Tell us more..." required></textarea>
+      </div>
+
+      <button type="submit" class="barcoop-contact__submit">{{ section.settings.button_label }}</button>
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Barcoop Contact",
+  "tag": "section",
+  "class": "barcoop-contact-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Get in Touch"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Have a question, feedback, or just want to say hello? We'd love to hear from you."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Submit Button Label",
+      "default": "Send Message"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barcoop Contact"
+    }
+  ]
+}
+{% endschema %}
