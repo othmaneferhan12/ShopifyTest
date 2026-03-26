@@ -204,7 +204,8 @@
                   "type": "add-to-cart",
                   "static": true,
                   "settings": {
-                    "style_class": "button"
+                    "style_class": "button",
+                    "label": "Ajouter au panier"
                   },
                   "blocks": {}
                 },
@@ -242,6 +243,70 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "divider_composition": {
+              "type": "_divider",
+              "name": "Divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "text_composition": {
+              "type": "text",
+              "name": "Composition",
+              "settings": {
+                "text": "<p><strong>Composition</strong></p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_return_policy": {
+              "type": "text",
+              "name": "Return policy",
+              "settings": {
+                "text": "<p><strong>Politique de retour</strong><br>Retour gratuit sous 14 jours.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -249,7 +314,10 @@
             "divider_VJhene",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
-            "text_aEtTtq"
+            "text_aEtTtq",
+            "divider_composition",
+            "text_composition",
+            "text_return_policy"
           ]
         }
       },
@@ -271,7 +339,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>You may also like </h3>",
+            "text": "<h3>Vous pourriez aussi aimer :</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",

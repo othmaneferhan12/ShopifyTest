@@ -16,6 +16,7 @@
           "name": "Title",
           "settings": {
             "text": "<h1>{{ closest.collection.title }}</h1>",
+            "comment__mason": "Collection title — auto-populated from Shopify",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
