@@ -173,3 +173,23 @@ Target store domain: `shoopify-test.myshopify.com`
 | Hover states | DOCUMENTED | CSS-only, no JS hover effects |
 | Form validations | DOCUMENTED | `product-form.js` — native validation |
 | App blocks | PARTIAL | Klaviyo, Trustpilot, WishlistKing, Pandectes need app installation on target |
+
+---
+
+## Delta Summary Table
+
+| Element | Source Behavior | Clone Behavior | Reason | Workaround |
+|---|---|---|---|---|
+| Customer data | Full customer DB | Empty | No Admin API access to source | Customers register fresh |
+| Shopify Flow | Active workflows (tag automation, channel routing) | Not replicated | No Admin API access to source | Manual recreation in target admin > Apps > Flow |
+| Product reviews (Loox) | Installed but inactive (all null) | Not installed | No reviews exist to migrate | Install Loox on target if needed |
+| Gift card | 1 gift card product | Not imported | Cannot import via API | Create manually in admin > Products > Gift cards |
+| Checkout (Plus) | Checkout Extensibility | Standard checkout | Target is not Shopify Plus | Use standard checkout settings |
+| Markets/Localization | 5 locales (IT/FR/DE/ES/EN) | Not configured | Requires manual admin setup | Configure in Settings > Markets |
+| Email templates | Branded Mason's emails | Default Shopify emails | No API access to source templates | Manually brand in Settings > Notifications |
+| Shopify Functions | cart-discount.js detected | Not replicated | Requires separate app deployment | Check source admin for custom functions |
+| Product count | 806 products | 50 imported | Intentional partial import | Run import-products.js without slice for full import |
+| Collection count | 155 collections | 30 imported | Intentional partial import | Run import-collections.js without slice for full import |
+| Redirects | N/A | 1024 built, not imported | Awaiting full import | Run import-redirects.js after all products/collections imported |
+| Navigation menus | Main menu + footer | Extracted, not created in admin | Requires manual setup or API | Create in admin > Online Store > Navigation |
+| Third-party apps | Klaviyo, Trustpilot, Triple Whale, Klarna, Pandectes, WishlistKing | Not installed | Requires manual app installation | Install each app from Shopify App Store |
