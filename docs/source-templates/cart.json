@@ -1,0 +1,19 @@
+{
+  "name": "cart",
+  "template_id": "template--26534940672382",
+  "page_url": "/fr/cart",
+  "template_sections_order": [
+    "main",
+    "1772464415603793e2"
+  ],
+  "template_sections": {
+    "main": {
+      "type": "main-cart",
+      "description": "Cart page with line items, quantity controls, subtotal, and checkout button."
+    },
+    "1772464415603793e2": {
+      "type": "app-embed",
+      "description": "Third-party widget embed (lb-widget-icuc). Responsive CSS container. Likely upsell or cross-sell widget."
+    }
+  }
+}

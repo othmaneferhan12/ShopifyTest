@@ -1,0 +1,15 @@
+{
+  "name": "404",
+  "template_id": "template--26534940541310",
+  "page_url": "/fr/nonexistent-page",
+  "note": "Shares the same template ID as the generic 'page' template (template--26534940541310). The 404 behavior is handled by Shopify routing, not a separate template.",
+  "template_sections_order": [
+    "main"
+  ],
+  "template_sections": {
+    "main": {
+      "type": "main-page",
+      "description": "404 error page content. Uses the same main-page section as regular pages."
+    }
+  }
+}

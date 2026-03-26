@@ -1,0 +1,14 @@
+{
+  "name": "list-collections",
+  "template_id": "template--26534940737918",
+  "page_url": "/fr/collections",
+  "template_sections_order": [
+    "main"
+  ],
+  "template_sections": {
+    "main": {
+      "type": "main-list-collections",
+      "description": "Collection list grid page. Displays all available collections with images and links."
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "product",
+  "template_id": "template--26534940508542",
+  "page_url": "/fr/products/[slug]",
+  "template_sections_order": [
+    "main",
+    "product_description_qDz6W8",
+    "product_recommendations_NeYqcN",
+    "1772452475e4a48005",
+    "17730509946196dc60"
+  ],
+  "template_sections": {
+    "main": {
+      "type": "main-product",
+      "description": "Full product page with media gallery, variant picker, and purchase flow",
+      "blocks": {
+        "media_gallery": "4-image carousel with thumbnails numbered 01-04, zoom capability",
+        "product_info": "Title, brand (Mason's), product code, SKU",
+        "variant_picker": "Size selector (25-34 US sizing), color display, per-size stock status (InStock/OutOfStock)",
+        "pricing": "Sale price + compare-at price, stock messaging ('1 restant')",
+        "buy_buttons": "'Ajouter au panier' button",
+        "size_guide": "IT/US/FR/DE/UK size conversion table",
+        "composition": "Material breakdown (e.g. 94% Coton 05% Polyester 01% Élasthanne)",
+        "manufacturing": "Special process notes (e.g. 'Teint en pièce')",
+        "return_policy": "14-day return guarantee"
+      }
+    },
+    "product_description_qDz6W8": {
+      "type": "product-description",
+      "description": "Extended product description with marketing copy. Highlights key features, design elements (colored eyelet, M rivet), and versatility messaging."
+    },
+    "product_recommendations_NeYqcN": {
+      "type": "product-recommendations",
+      "description": "'Vous pourriez aussi aimer :' (You might also like) — related product carousel powered by Shopify recommendations API."
+    },
+    "1772452475e4a48005": {
+      "type": "app-embed",
+      "description": "Third-party widget embed (lb-widget-pac). Responsive CSS: min-width 0, max-width 100%, width 100%. Likely Trustpilot or similar review widget."
+    },
+    "17730509946196dc60": {
+      "type": "app-embed",
+      "description": "Third-party widget embed (empty/minimal content detected). Possibly lazy-loaded app section."
+    }
+  }
+}

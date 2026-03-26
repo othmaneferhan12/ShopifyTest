@@ -1,0 +1,14 @@
+{
+  "name": "search",
+  "template_id": "template--26534940574078",
+  "page_url": "/fr/search",
+  "template_sections_order": [
+    "main"
+  ],
+  "template_sections": {
+    "main": {
+      "type": "main-search",
+      "description": "Search results page with query input and product/page/article results grid."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "page",
+  "template_id": "template--26534940541310",
+  "page_url": "/fr/pages/about-us",
+  "note": "This template ID is also used for 404 error pages — it is the generic 'page' template.",
+  "template_sections_order": [
+    "main"
+  ],
+  "template_sections": {
+    "main": {
+      "type": "main-page",
+      "description": "Generic page content section. Renders the page's rich text/HTML body content."
+    }
+  }
+}

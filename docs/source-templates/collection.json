@@ -1,0 +1,14 @@
+{
+  "name": "collection",
+  "template_id": "template--26535203504510",
+  "page_url": "/fr/collections/all",
+  "template_sections_order": [
+    "main"
+  ],
+  "template_sections": {
+    "main": {
+      "type": "main-collection",
+      "description": "Collection product grid with filtering and sorting. Displays product cards with images, prices, variant swatches, and quick-add functionality."
+    }
+  }
+}

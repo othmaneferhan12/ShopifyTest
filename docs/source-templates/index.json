@@ -1,0 +1,133 @@
+{
+  "name": "index",
+  "template_id": "template--26535203537278",
+  "page_url": "/fr",
+  "global_sections": {
+    "header_group": {
+      "group_id": "sections--26534940410238",
+      "sections_order": [
+        "announcement_VQkp6J",
+        "header",
+        "1773307945b64ef622",
+        "blocks_y3XEKi"
+      ],
+      "sections": {
+        "announcement_VQkp6J": {
+          "type": "announcement",
+          "description": "Newsletter signup banner ('INSCRIVEZ-VOUS À LA NEWSLETTER – 10% SUR VOTRE PREMIÈRE COMMANDE') + region/language selector (195+ countries, 5 languages)"
+        },
+        "header": {
+          "type": "header",
+          "description": "Sticky header with drawer navigation. Categories: FW25 Homme, FW25 Femme. Sub-categories by product type, fit, model name. Account login, search, cart icons."
+        },
+        "1773307945b64ef622": {
+          "type": "mobile-search",
+          "description": "Responsive mobile search bar (visible < 750px). Gray background, rounded input, orange hover icon (#FF5031). Prevents empty submissions."
+        },
+        "blocks_y3XEKi": {
+          "type": "blocks",
+          "description": "Global blocks section (empty/minimal content detected)"
+        }
+      }
+    },
+    "footer_group": {
+      "group_id": "sections--26534940377470",
+      "sections": {
+        "footer": {
+          "type": "footer",
+          "description": "Newsletter email signup + privacy policy link. Copyright 'Mason's' + 'Made in Evolve' credit. 16 payment method icons."
+        }
+      }
+    }
+  },
+  "template_sections_order": [
+    "hero_8MbntM",
+    "collection_links_kj66pU",
+    "shop_the_look_nEzmxN",
+    "product_list_KhqYzm",
+    "product_list_8HBMei",
+    "image_with_text_qMGeBL",
+    "image_with_text_bjp4ki"
+  ],
+  "template_sections": {
+    "hero_8MbntM": {
+      "type": "hero",
+      "description": "Full-width hero banner for SS26 collection",
+      "content": {
+        "image": "Masons_ss26_1.jpg",
+        "heading": "NOUVELLE COLLECTION SS26",
+        "tagline": "Découvrez la nouvelle collection : passion artisanale depuis 1974",
+        "links": [
+          { "label": "Homme", "url": "/fr/collections/printemps-ete-homme" },
+          { "label": "Femme", "url": "/fr/collections/printemps-ete-femme" }
+        ]
+      }
+    },
+    "collection_links_kj66pU": {
+      "type": "collection-links",
+      "description": "Signature pant models showcase with descriptions and images",
+      "content": {
+        "men_models": ["Milan (extra slim chino)", "New York (regular fit chino)", "Turin (slim fit chino)", "Chile (cargo, multiple cuts)"],
+        "women_models": ["New York Carrot", "New York", "Easy (straight)", "Chile Femme (cargo)", "Malibu (carrot gabardine)"],
+        "images_per_model": "1 large + 1 thumbnail",
+        "cta_per_model": "DÉCOUVRIR LE MODÈLE → /fr/collections/[model-name]"
+      }
+    },
+    "shop_the_look_nEzmxN": {
+      "type": "shop-the-look",
+      "description": "6 editorial outfit showcases, each with lifestyle photo + 3-5 product cards",
+      "content": {
+        "layout": "Grid-based, 3:4 aspect ratio cards, prev/next navigation",
+        "looks": [
+          "Men's Casual (Torino chino $345, City Jacket blazer $469)",
+          "Women's Tailored (Livia shirt $255, Irene blazer $559)",
+          "Men's Workwear (Field Jacket M74 $545, cargo bermudas)",
+          "Women's Cargo (Florence New jacket $615, wide-leg cargo $335-$435)",
+          "Women's Knit (Karina sleeveless $185, crochet pieces)",
+          "Mixed Casual (jerseys + bermudas $255-$435)"
+        ]
+      }
+    },
+    "product_list_KhqYzm": {
+      "type": "product-list",
+      "description": "Men's SS26 new arrivals product carousel",
+      "content": {
+        "heading": "HOMME SS26 NOUVEAUTÉS",
+        "cta": "DÉCOUVREZ LA NOUVELLE COLLECTION",
+        "categories": ["Flyshirt overshirts", "Field Jackets", "M74 blazers ($435-$545)", "Chinos: Osaka/Torino/Milano ($305-$355)", "Cargo: Chile", "Denim: Harris", "Travel: Da Vinci blazers + Milano Jogger ($355-$535)"],
+        "price_range": "$305-$545",
+        "features": "Multiple colors per item, 5-image carousel per product"
+      }
+    },
+    "product_list_8HBMei": {
+      "type": "product-list",
+      "description": "Women's SS26 new arrivals product carousel",
+      "content": {
+        "heading": "FEMME SS26 NOUVEAUTÉS",
+        "items_count": 12,
+        "categories": ["Santa Barbara jacket ($579)", "Irma Pockets jacket ($595)", "Vivienne Work balloon ($365)", "Dallas Wide cargo ($335)", "Fatigue Jogger ($305)", "Marlene camo ($365)", "Malibu Jogger ($299)", "Chile City slim ($365)", "Baltimora bermuda ($289)"],
+        "price_range": "$289-$595"
+      }
+    },
+    "image_with_text_qMGeBL": {
+      "type": "image-with-text",
+      "description": "Brand heritage / About Us section",
+      "content": {
+        "theme": "Brand story since 1974",
+        "text": "Giorgio transformed Vilmo Martini's tailoring workshop in Carrara into Mason's. Tradition artisanale et innovation.",
+        "cta": "ABOUT US → full history page",
+        "brand_pillars": ["Authentique", "Libre", "Élégant"]
+      }
+    },
+    "image_with_text_bjp4ki": {
+      "type": "image-with-text",
+      "description": "Personal Shopper service promotion",
+      "content": {
+        "heading": "PERSONAL SHOPPER FOR YOU",
+        "text": "Dedicated video call in Italian or English, personalized advice, purchase immediately or review at leisure.",
+        "image": "about-4.jpg",
+        "cta": "BOOK ON WHATSAPP → phone link"
+      }
+    }
+  }
+}
