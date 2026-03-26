@@ -1,0 +1,33 @@
+# Lighthouse Baseline — Source Store (us.masons.it/fr)
+# Date: 2026-03-25
+# Status: PENDING MANUAL RUN (PageSpeed Insights API quota exhausted)
+#
+# To complete this step manually:
+# 1. Open Chrome DevTools > Lighthouse tab on https://us.masons.it/fr
+# 2. Run audit for: Performance, Accessibility, SEO
+# 3. Run both Mobile and Desktop
+# 4. Fill in scores below:
+
+## Mobile
+- Performance:  [RUN MANUALLY]
+- Accessibility: [RUN MANUALLY]
+- SEO:          [RUN MANUALLY]
+- FCP:          [RUN MANUALLY]
+- LCP:          [RUN MANUALLY]
+- TBT:          [RUN MANUALLY]
+- CLS:          [RUN MANUALLY]
+- Speed Index:  [RUN MANUALLY]
+
+## Desktop
+- Performance:  [RUN MANUALLY]
+- Accessibility: [RUN MANUALLY]
+- SEO:          [RUN MANUALLY]
+- FCP:          [RUN MANUALLY]
+- LCP:          [RUN MANUALLY]
+- TBT:          [RUN MANUALLY]
+- CLS:          [RUN MANUALLY]
+- Speed Index:  [RUN MANUALLY]
+
+# Alternative: Run via CLI:
+# npx lighthouse https://us.masons.it/fr --output=json --output-path=./docs/lighthouse-mobile.json --preset=perf --form-factor=mobile
+# npx lighthouse https://us.masons.it/fr --output=json --output-path=./docs/lighthouse-desktop.json --preset=perf --form-factor=desktop
