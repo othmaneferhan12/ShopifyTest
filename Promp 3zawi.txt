@@ -1,0 +1,156 @@
+Goal: Create a 100% identical, pixel-perfect clone of [SOURCE_STORE_URL] into my local Shopify Horizon theme.
+Local theme path: [LOCAL_THEME_PATH] GitHub repo: [GITHUB_REPO_URL] (branch: main) Theme base: Shopify Horizon [HORIZON_VERSION] — fresh install, [FILE_COUNT] files committed. Not 99% — pixel-perfect. Every page, every section, every interaction.
+What "100% Clone" Means
+Every single one of these must be replicated exactly:
+1. Visual Design — Colors, fonts, spacing, borders, shadows, gradients, animations, hover states, focus states, responsive breakpoints (mobile 375px / tablet 768px / desktop 1440px)
+2. All Pages — Homepage, collection pages, product pages, cart, about, contact, policy pages, blog, blog posts, FAQ, search, 404, any custom pages
+3. All Sections & Blocks — Every section on every page, in exact order, with exact settings (image sizes, text content, button styles, layout options)
+4. Navigation — Header menu structure, mega menus, mobile drawer, footer links, breadcrumbs
+5. Product Data — Titles, descriptions, images, variants, pricing, metafields, tags, collections, inventory display
+6. Typography — Exact font families, weights, sizes, line-heights, letter-spacing, and text-transform at every breakpoint
+7. Colors — Exact hex/rgb/hsl values for every background, text, border, shadow, and gradient
+8. Interactive Elements — Carousels/sliders, accordions, tabs, popups, modals, drawer carts, quick-view, filters, search, infinite scroll
+9. Custom Code — Any custom CSS, custom Liquid sections, custom JavaScript
+10. Apps & Integrations — Identify all visible third-party apps/widgets and document what they are (reviews, upsells, loyalty, chat, etc.)
+11. SEO & Meta — Page titles, meta descriptions, structured data, alt tags, URL structures
+12. Media — All images, videos, icons, SVGs downloaded at original quality
+13. Favicon & Branding — Favicon, loading screens, announcement bars, social proof elements
+Tools
+Tool	Purpose
+Claude in Chrome	Browse source store, inspect elements, extract CSS, execute JS, take screenshots
+Chrome Control	Navigate pages, get full page content, execute JS for extraction
+Claude Preview	Local dev server, screenshots, inspect clone, verify pixel accuracy
+Figma MCP	Design file inspection (if I provide Figma files)
+No additional MCP servers needed unless you identify a gap — if so, tell me before proceeding.
+Workflow Rules
+* Atomic Commits: Build 1–2 sections at a time, commit to GitHub, wait for my approval before moving on.
+* Never guess: If you can't determine an exact value, use Chrome DevTools via MCP to inspect it.
+* Match units exactly: Use rem/em where the source does, px where the source does.
+* Match z-index stacking exactly.
+* Match animation easing curves exactly.
+* If something can't be done in Liquid/Horizon: Tell me WHY and propose the closest alternative.
+* Track progress in a checklist I can see.
+Review Gates (MANDATORY)
+* STOP after Phase 1 (Site Audit) — wait for my review and approval.
+* STOP after each page in Phase 4 — wait for my visual review.
+* NEVER proceed past a gate without my explicit "go."
+
+Phase 0: Reconnaissance
+1. Open [SOURCE_STORE_URL] via Claude in Chrome.
+2. Detect tech stack: window.Shopify theme info, third-party scripts, font loading method, JS libraries (Swiper, GSAP, AOS, Lottie, etc.).
+3. Build complete sitemap by extracting all internal links from navigation + footer + any linked pages.
+4. Start local dev server via Claude Preview.
+5. Take baseline screenshot of default Horizon theme for comparison.
+
+Phase 1: Full Site Audit (STOP FOR REVIEW)
+1.1 — Design Token Extraction
+* Extract all CSS custom properties from :root / html.
+* Extract computed colors from key elements (backgrounds, text, headings, buttons, links, borders, shadows).
+* Build complete color palette → map each color to Horizon's 7 color scheme slots.
+1.2 — Typography Extraction
+For every element type (h1–h6, p, a, button, span, li, label, input, blockquote):
+* font-family, font-weight, font-size, line-height, letter-spacing, text-transform
+Identify font source (Shopify font library, Google Fonts, Adobe Fonts, custom @font-face). Map to Horizon's 4 font slots: type_body_font, type_subheading_font, type_heading_font, type_accent_font. If fonts aren't in Shopify's library → plan custom @font-face loading via assets/custom-fonts.css.
+1.3 — Page-by-Page Screenshots + Section Inventory
+For each page (desktop 1440px + mobile 375px):
+Page	URL Pattern
+Homepage	/
+Collection List	/collections
+Collection Page (×2)	/collections/[slug]
+Product Page (×2)	/products/[slug]
+Cart	/cart
+About	/pages/about (or equivalent)
+Contact	/pages/contact (or equivalent)
+Blog Index	/blogs/[blog]
+Blog Post	/blogs/[blog]/[post]
+FAQ	/pages/faq (or equivalent)
+Custom Pages	Any unique pages (science, quiz, subscription, etc.)
+Policies	/policies/*
+Search	/search
+404	/404
+Per-section audit schema — for every section on every page, document:
+Field	What to capture
+Section type	Horizon equivalent or "custom section needed"
+Content	Headings, body text, images, buttons, links
+Layout	Direction, alignment, columns, gaps, max-width
+Colors	Background, text, borders, shadows
+Spacing	Padding (top/bottom/left/right), margin, gap — exact values
+Responsive behavior	What changes between mobile / tablet / desktop
+Animation	Entry animation, trigger, duration, easing, delay
+Interactive state	Hover, focus, active states
+1.4 — Navigation Structure
+* Desktop header: logo position, menu items, mega menu structure, dropdowns, action icons (search, account, cart + badge).
+* Mobile drawer: menu hierarchy, accordion behavior, close animation.
+* Footer: column structure, menu groups, social links, newsletter form, legal links.
+* Breadcrumbs (if any): format, separator, pages where they appear.
+1.5 — Animation & Interaction Inventory
+* Scroll-triggered animations (fade, slide, parallax) with timing values.
+* Hover states for cards, buttons, links, images.
+* Header behavior (sticky, shrink, transparent-on-hero, show/hide-on-scroll).
+* Carousel/slider config (library used, autoplay delay, speed, easing, slides-per-view, indicators, loop behavior).
+* Accordion behavior (single-open vs multi-open, animation).
+* Modal/popup behavior (newsletter, quick view, age gate, exit intent).
+* Cart drawer behavior (slide direction, overlay, animation).
+* Page transition effects (if any).
+1.6 — Third-Party App Identification
+* List every visible app/widget with its purpose.
+* Note which are CSS-only cosmetic (can be replicated) vs. functional (need app installation).
+* For functional apps: document the visual "shell" (placeholder CSS) to maintain layout before apps are connected.
+1.7 — Deliverable
+Present a complete Site Audit Document containing all of the above. STOP. Wait for my approval before touching any code.
+
+Phase 2: Asset Collection
+1. Download every image, video, SVG, and icon from the source at highest available quality.
+2. Download or identify all custom fonts (.woff2 preferred).
+3. Organize in assets/ folder with clear naming.
+4. Create an asset manifest: source URL → local filename.
+
+Phase 3: Theme Configuration
+1. Map source theme settings to Horizon's settings_schema.json.
+2. Configure settings_data.json to match colors, fonts, spacing, border-radius.
+3. If source uses a continuous background gradient → implement at #MainContent body level, not per-section.
+4. Set global border-radius to match source across all buttons, inputs, modals.
+5. Override Horizon's CSS variables for fonts if using custom @font-face.
+6. Flag any settings that Horizon doesn't support natively → these become custom sections.
+
+Phase 4: Section-by-Section Build (STOP AFTER EACH PAGE)
+For each page, in order:
+1. Compare source section to available Horizon sections.
+2. If Horizon has an equivalent → configure it to match exactly.
+3. If Horizon doesn't have it → build a custom Liquid section that replicates it pixel-perfectly.
+4. Prioritize Swiper.js for carousels unless the source specifically uses another library.
+5. After each section: side-by-side screenshot comparison (source vs. clone) via Claude Preview.
+6. Fix any visual differences before moving to the next section.
+7. Commit to GitHub after completing each page.
+8. STOP. Wait for my visual review before proceeding to the next page.
+
+Phase 5: Product & Content Data
+1. Create a GraphQL script to import all products with correct metafields, variants, images, and tags.
+2. Import all collection structures (smart + manual).
+3. Import all page content (about, FAQ, contact, custom pages).
+4. Import blog posts (if any).
+5. Set up all menu/navigation structures.
+
+Phase 6: Custom Code & Interactions
+1. Replicate any custom CSS not covered by theme settings.
+2. Replicate any custom JavaScript interactions.
+3. Add animations that Horizon doesn't support natively (scroll-triggered, parallax, etc.).
+4. Test every interactive element against the source.
+
+Phase 7: QA — Pixel-Perfect Verification
+For every page, at three breakpoints (375px, 768px, 1440px):
+1. Side-by-side screenshot comparison (source vs. clone).
+2. Overlay diff analysis — flag any deviation.
+3. Test all interactions (clicks, hovers, scrolls, forms, drawers).
+4. Verify responsive transitions between breakpoints.
+5. Check SEO elements match (titles, meta, structured data, alt tags).
+6. Performance check (no unnecessary render-blocking resources added).
+Do NOT mark any page as done until the visual diff is <1%.
+
+Phase 8: Documentation
+1. List all third-party apps that need manual installation + what they do.
+2. Document all custom sections/snippets created (purpose, settings, usage).
+3. Create a "What's Different" report for anything that couldn't be 100% matched, with reasoning.
+4. Provide a deployment checklist (DNS, app installs, data imports, final QA).
+
+Start now. Planing what.

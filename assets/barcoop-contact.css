@@ -1,0 +1,111 @@
+/* ============================================
+   Barcoop Contact Page
+   ============================================ */
+.barcoop-contact {
+  background-color: var(--barcoop--light, #fbf7e9);
+  padding: 4rem 2rem;
+}
+
+.barcoop-contact__inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.barcoop-contact__heading {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--barcoop--dark, #3d3d3d);
+  text-align: center;
+  margin: 0 0 0.75rem;
+}
+
+.barcoop-contact__subheading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--barcoop--dark, #3d3d3d);
+  opacity: 0.7;
+  text-align: center;
+  margin: 0 0 2.5rem;
+  line-height: 1.6;
+}
+
+.barcoop-contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.barcoop-contact__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.barcoop-contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.barcoop-contact__label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--barcoop--dark, #3d3d3d);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.barcoop-contact__input,
+.barcoop-contact__textarea {
+  padding: 0.875rem 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9375rem;
+  background: white;
+  color: var(--barcoop--dark, #3d3d3d);
+  border: 1px solid var(--barcoop--dark-fade, #22222033);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.barcoop-contact__input:focus,
+.barcoop-contact__textarea:focus {
+  border-color: var(--barcoop--brand, #3a8075);
+}
+
+.barcoop-contact__textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.barcoop-contact__submit {
+  align-self: flex-start;
+  padding: 0.875rem 2.5rem;
+  background: var(--barcoop--brand, #3a8075);
+  color: var(--barcoop--light, #fbf7e9);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.barcoop-contact__submit:hover {
+  background: var(--barcoop--dark, #3d3d3d);
+}
+
+@media (max-width: 767px) {
+  .barcoop-contact {
+    padding: 3rem 1.25rem;
+  }
+
+  .barcoop-contact__row {
+    grid-template-columns: 1fr;
+  }
+}

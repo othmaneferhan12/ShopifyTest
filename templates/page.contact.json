@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "barcoop_contact": {
+      "type": "barcoop-contact",
+      "settings": {
+        "heading": "Get in Touch",
+        "subheading": "Have a question, feedback, or just want to say hello? We'd love to hear from you.",
+        "button_label": "Send Message"
+      }
+    }
+  },
+  "order": ["barcoop_contact"]
+}
