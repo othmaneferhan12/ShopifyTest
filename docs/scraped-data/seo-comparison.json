@@ -1,0 +1,78 @@
+{
+  "source": [
+    {
+      "url": "https://us.masons.it/fr/",
+      "title": "Mason&#39;s | Pantalons Tailleur depuis 1974 | Boutique Officielle",
+      "metaDesc": "Mason&#39;s : l&#39;excellence italienne depuis 1974, créant des pantalons qui f",
+      "canonical": "https://us.masons.it/fr",
+      "jsonLd": 1,
+      "imgNoAlt": 29,
+      "imgTotal": 221
+    },
+    {
+      "url": "https://us.masons.it/fr/collections/accessories-1",
+      "title": "Foulards et sacs à la mode | Mason&#39;s\n &ndash; Mason&#39;s",
+      "metaDesc": "La collection de sacs et foulards Mason est unique, raffinée dans le Look et dan",
+      "canonical": "https://us.masons.it/fr/collections/accessories",
+      "jsonLd": 1,
+      "imgNoAlt": 3,
+      "imgTotal": 22
+    },
+    {
+      "url": "https://us.masons.it/fr/products/livia-camicia-donna-a-manica-corta-in-tela-misto-lino-e-viscosa-fantasia-a-fiori",
+      "title": "Chemise Femme Livia Beige Toile Lin Viscose Floral | Mason&#39;s\n &ndash; Mason&",
+      "metaDesc": "Abonnez-vous à la newsletter pour bénéficier de 10% de réduction sur votre premi",
+      "canonical": "https://us.masons.it/fr/products/livia-camicia-donna-a-manica-corta-in-tela-misto-lino-e-viscosa-fantasia-a-fiori",
+      "jsonLd": 3,
+      "imgNoAlt": 3,
+      "imgTotal": 36
+    },
+    {
+      "url": "https://us.masons.it/fr/pages/faq",
+      "title": "FAQ\n &ndash; Mason&#39;s",
+      "metaDesc": "NONE",
+      "canonical": "https://us.masons.it/fr/pages/faq",
+      "jsonLd": 1,
+      "imgNoAlt": 3,
+      "imgTotal": 12
+    }
+  ],
+  "target": [
+    {
+      "url": "https://shoopify-test.myshopify.com/",
+      "title": "Shoopify Test",
+      "metaDesc": "NONE",
+      "canonical": "NONE",
+      "jsonLd": 0,
+      "imgNoAlt": 0,
+      "imgTotal": 0
+    },
+    {
+      "url": "https://shoopify-test.myshopify.com/collections/accessories-1",
+      "title": "Shoopify Test",
+      "metaDesc": "NONE",
+      "canonical": "NONE",
+      "jsonLd": 0,
+      "imgNoAlt": 0,
+      "imgTotal": 0
+    },
+    {
+      "url": "https://shoopify-test.myshopify.com/products/livia-camicia-donna-a-manica-corta-in-tela-misto-lino-e-viscosa-fantasia-a-fiori",
+      "title": "Shoopify Test",
+      "metaDesc": "NONE",
+      "canonical": "NONE",
+      "jsonLd": 0,
+      "imgNoAlt": 0,
+      "imgTotal": 0
+    },
+    {
+      "url": "https://shoopify-test.myshopify.com/pages/faq",
+      "title": "Shoopify Test",
+      "metaDesc": "NONE",
+      "canonical": "NONE",
+      "jsonLd": 0,
+      "imgNoAlt": 0,
+      "imgTotal": 0
+    }
+  ]
+}
