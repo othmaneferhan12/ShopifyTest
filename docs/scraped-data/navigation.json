@@ -1,0 +1,261 @@
+{
+  "main_menu": {
+    "handle": "main-menu",
+    "items": [
+      {
+        "title": "Accessories",
+        "url": "/collections/accessories",
+        "type": "collection"
+      },
+      {
+        "title": "All",
+        "url": "/collections/all",
+        "type": "collection"
+      },
+      {
+        "title": "Bermuda cargo homme",
+        "url": "/collections/bermuda-cargo-homme",
+        "type": "collection"
+      },
+      {
+        "title": "Bermuda chino homme",
+        "url": "/collections/bermuda-chino-homme",
+        "type": "collection"
+      },
+      {
+        "title": "Bermuda ete femme",
+        "url": "/collections/bermuda-ete-femme",
+        "type": "collection"
+      },
+      {
+        "title": "Bermuda ete homme",
+        "url": "/collections/bermuda-ete-homme",
+        "type": "collection"
+      },
+      {
+        "title": "Blazer dhiver femme",
+        "url": "/collections/blazer-dhiver-femme",
+        "type": "collection"
+      },
+      {
+        "title": "Blazer dhiver hommes",
+        "url": "/collections/blazer-dhiver-hommes",
+        "type": "collection"
+      },
+      {
+        "title": "Blazer ete homme",
+        "url": "/collections/blazer-ete-homme",
+        "type": "collection"
+      },
+      {
+        "title": "Boston",
+        "url": "/collections/boston",
+        "type": "collection"
+      },
+      {
+        "title": "Carrot fit femme masons",
+        "url": "/collections/carrot-fit-femme-masons",
+        "type": "collection"
+      },
+      {
+        "title": "Carrot fit pantalons homme",
+        "url": "/collections/carrot-fit-pantalons-homme",
+        "type": "collection"
+      },
+      {
+        "title": "Chemises ete homme",
+        "url": "/collections/chemises-ete-homme",
+        "type": "collection"
+      },
+      {
+        "title": "Chemises femme ete",
+        "url": "/collections/chemises-femme-ete",
+        "type": "collection"
+      },
+      {
+        "title": "Chemises hiver femme",
+        "url": "/collections/chemises-hiver-femme",
+        "type": "collection"
+      },
+      {
+        "title": "Chile bermuda",
+        "url": "/collections/chile-bermuda",
+        "type": "collection"
+      },
+      {
+        "title": "Chile femme pantalon cargo",
+        "url": "/collections/chile-femme-pantalon-cargo",
+        "type": "collection"
+      },
+      {
+        "title": "Chile pantalons cargo masons",
+        "url": "/collections/chile-pantalons-cargo-masons",
+        "type": "collection"
+      },
+      {
+        "title": "Costume femme",
+        "url": "/collections/costume-femme",
+        "type": "collection"
+      },
+      {
+        "title": "Costumes dete femme",
+        "url": "/collections/costumes-dete-femme",
+        "type": "collection"
+      }
+    ]
+  },
+  "footer": {
+    "handle": "footer",
+    "items": [
+      {
+        "title": "Entreprise",
+        "url": "/pages/entreprise",
+        "type": "page"
+      },
+      {
+        "title": "Historique",
+        "url": "/pages/historique",
+        "type": "page"
+      },
+      {
+        "title": "Contacts",
+        "url": "/pages/contacts",
+        "type": "page"
+      },
+      {
+        "title": "Retours et remboursements",
+        "url": "/pages/retours-et-remboursements",
+        "type": "page"
+      },
+      {
+        "title": "Expeditions",
+        "url": "/pages/expeditions",
+        "type": "page"
+      },
+      {
+        "title": "Paiements",
+        "url": "/pages/paiements",
+        "type": "page"
+      },
+      {
+        "title": "Assistant de vente",
+        "url": "/pages/assistant-de-vente",
+        "type": "page"
+      },
+      {
+        "title": "Avis de non responsabilite",
+        "url": "/pages/avis-de-non-responsabilite",
+        "type": "page"
+      },
+      {
+        "title": "Politique de cookie du site web masons it",
+        "url": "/pages/politique-de-cookie-du-site-web-masons-it",
+        "type": "page"
+      },
+      {
+        "title": "Champ d application",
+        "url": "/pages/champ-d-application",
+        "type": "page"
+      }
+    ]
+  },
+  "all_links": {
+    "collections": [
+      "/collections/accessories",
+      "/collections/all",
+      "/collections/bermuda-cargo-homme",
+      "/collections/bermuda-chino-homme",
+      "/collections/bermuda-ete-femme",
+      "/collections/bermuda-ete-homme",
+      "/collections/blazer-dhiver-femme",
+      "/collections/blazer-dhiver-hommes",
+      "/collections/blazer-ete-homme",
+      "/collections/boston",
+      "/collections/carrot-fit-femme-masons",
+      "/collections/carrot-fit-pantalons-homme",
+      "/collections/chemises-ete-homme",
+      "/collections/chemises-femme-ete",
+      "/collections/chemises-hiver-femme",
+      "/collections/chile-bermuda",
+      "/collections/chile-femme-pantalon-cargo",
+      "/collections/chile-pantalons-cargo-masons",
+      "/collections/costume-femme",
+      "/collections/costumes-dete-femme",
+      "/collections/costumes-ete-homme",
+      "/collections/coupe-droite-pantalons-femme-1",
+      "/collections/dallas",
+      "/collections/denim-winter-femme",
+      "/collections/easy-straight",
+      "/collections/extra-slim-fit-pantalons-homme",
+      "/collections/fall-winter-femme",
+      "/collections/fall-winter-homme",
+      "/collections/homme-costume",
+      "/collections/london-bermuda-homme",
+      "/collections/malibu",
+      "/collections/milano-pantalons-chino-homme-masons",
+      "/collections/new-arrivals",
+      "/collections/new-woman-arrivals",
+      "/collections/new-york-carrot",
+      "/collections/new-york-chino-homme-masons",
+      "/collections/new-york-femme-chinos",
+      "/collections/osaka-men-chino-pants",
+      "/collections/overshirt-homme",
+      "/collections/pantalons-cargo-dhiver-femme",
+      "/collections/pantalons-cargo-dhiver-hommes",
+      "/collections/pantalons-cargo-femme-ete",
+      "/collections/pantalons-cargo-homme-ete",
+      "/collections/pantalons-chino-dhiver-femme",
+      "/collections/pantalons-chino-dhiver-hommes",
+      "/collections/pantalons-chino-ete-femme",
+      "/collections/pantalons-chino-ete-homme",
+      "/collections/pantalons-denim-dhiver-hommes",
+      "/collections/pantalons-denim-ete-femme",
+      "/collections/pantalons-dhiver-femme",
+      "/collections/pantalons-dhiver-hommes",
+      "/collections/pantalons-ete-femmes",
+      "/collections/pantalons-homme-ete",
+      "/collections/pantalons-jogger-dhiver-femme",
+      "/collections/pantalons-jogger-dhiver-hommes",
+      "/collections/pantalons-jogger-ete-pour-homme",
+      "/collections/pantalons-jogger-femme",
+      "/collections/prestige",
+      "/collections/prestige-donna",
+      "/collections/printemps-ete-femme",
+      "/collections/printemps-ete-homme",
+      "/collections/regular-fit-pantalons-homme",
+      "/collections/relaxed-fit-masons-hommes",
+      "/collections/relaxed-fit-pantalons-femme",
+      "/collections/shop-by-fit-femme",
+      "/collections/shop-by-model",
+      "/collections/shop-by-model-femme",
+      "/collections/slim-fit-femme-masons",
+      "/collections/slim-fit-pantalons-homme",
+      "/collections/tailored-denim",
+      "/collections/torino-pantalons-chino-homme-masons",
+      "/collections/vestes-et-manteaux-dhiver-pour-femmes",
+      "/collections/vestes-ete-femme",
+      "/collections/vestes-ete-homme",
+      "/collections/vestes-homme-dhiver",
+      "/collections/wide-leg"
+    ],
+    "pages": [
+      "/pages/assistant-de-vente",
+      "/pages/avis-de-non-responsabilite",
+      "/pages/champ-d-application",
+      "/pages/contacts",
+      "/pages/decouvrez-notre-histoire",
+      "/pages/entreprise",
+      "/pages/expeditions",
+      "/pages/historique",
+      "/pages/paiements",
+      "/pages/politique-de-cookie-du-site-web-masons-it",
+      "/pages/retours-et-remboursements"
+    ],
+    "other": [
+      "/fr/account",
+      "/fr/account/addresses",
+      "/fr/blogs/news"
+    ]
+  },
+  "linklist_refs": []
+}
