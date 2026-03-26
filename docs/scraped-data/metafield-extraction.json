@@ -1,0 +1,367 @@
+{
+  "extraction_date": "2026-03-26T03:12:16.776Z",
+  "source_store": "https://us.masons.it",
+  "method": "Public .json endpoints + DOM observation inference",
+  "products_sampled": [
+    {
+      "handle": "ada-camicia-donna-a-manica-corta-in-tricot-lurex",
+      "title": "Ada women's shirt short sleeve in lurex tricot",
+      "vendor": "Mason's",
+      "product_type": "Camicie",
+      "tags": "COLOR: ARGENTO, COMPLETI, Estivo, FIT:, GENDER: Donna, MAIN COLLECTION: Abbigliamento, MODEL: Ada, NEW6, SEASON: SS26, SKU: 4CA34240 JERT436-ARG-SS26, STYLE: Camicie, TRAD 15, TYPE1: Camicia",
+      "variants_count": 5,
+      "options": [
+        {
+          "name": "Italian Size",
+          "values": [
+            "38",
+            "40",
+            "42",
+            "44",
+            "46"
+          ]
+        }
+      ],
+      "metafields": null,
+      "sample_variant": {
+        "title": "38",
+        "sku": "4CA34240 JERT436-ARG-SS26",
+        "price": "235.00",
+        "compare_at_price": "",
+        "option1": "38",
+        "option2": null,
+        "option3": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "barcode": "8058895073670"
+      },
+      "body_html_snippet": "<ul>\n<li>\n<b>Color:</b> Silver</li>\n<li>\n<b>Composition:</b> 80% Viscose 09% Polyester 09% Polyamide 02% Elastane</li>\n<li>\n<b>Code:</b> 4CA34240 JERT436 ARG-SS26</li>\n</ul>"
+    },
+    {
+      "handle": "agnes-women-s-5-pocket-pant-in-stretch-denim-slim-fit",
+      "title": "Agnes women’s 5-pocket pant in stretch denim slim fit",
+      "vendor": "Mason's",
+      "product_type": "AGNES",
+      "tags": "AGNES, COLOR: Blu Navy, Denim, Donna, FW25, GENDER: Donna, Invernale, MAIN COLLECTION: Abbigliamento, MODEL: AGNES, Pantaloni, Promo FW25, SALDI30, SEASON: FW25, SKU: 45T4J07J019 DTE071-006-FW25, SLIM, STYLE: Pantaloni, TYPE2: Denim",
+      "variants_count": 10,
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "25",
+            "26",
+            "27",
+            "28",
+            "29"
+          ]
+        }
+      ],
+      "metafields": null,
+      "sample_variant": {
+        "title": "25",
+        "sku": "45T4J07J019 DTE071-006-FW25",
+        "price": "284.00",
+        "compare_at_price": "355.00",
+        "option1": "25",
+        "option2": null,
+        "option3": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "barcode": "1224000301021"
+      },
+      "body_html_snippet": "<ul>\n  <li><strong>Fit: </strong>Slim</li>\n  <li><strong>Color: </strong>Navy Blue</li>\n  <li><strong>Composition: </strong>94% Cotton 05% Polyester-styrene 01% Elastane</li>\n  <li><strong>Code: </strong>45T4J07J019 DTE071-006-FW25</li>\n</ul>\n"
+    },
+    {
+      "handle": "baltimora-bermuda-cargo-donna-in-panama-fiammata-relaxed-fit",
+      "title": "Baltimora women's cargo bermuda in slub panama relaxed fit",
+      "vendor": "Mason's",
+      "product_type": "Shorts",
+      "tags": "COLLECTION: WORK, COLOR: BEIGE SCURO, COMPLETI, Estivo, FIT: RELAXED, FotoZ, GENDER: Donna, MAIN COLLECTION: Abbigliamento, MODEL: Baltimora, NEW5, NEW6, SEASON: SS26, SKU: 4BET6R129R CBE073-264-SS26, STYLE: Shorts, TRAD 15, TYPE1: Cargo",
+      "variants_count": 6,
+      "options": [
+        {
+          "name": "Italian Size",
+          "values": [
+            "36",
+            "38",
+            "40",
+            "42",
+            "44"
+          ]
+        }
+      ],
+      "metafields": null,
+      "sample_variant": {
+        "title": "36",
+        "sku": "4BET6R129R CBE073-264-SS26",
+        "price": "289.00",
+        "compare_at_price": "",
+        "option1": "36",
+        "option2": null,
+        "option3": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "barcode": "8058895071706"
+      },
+      "body_html_snippet": "<ul>\n<li>\n<b>Fit:</b> Relaxed</li>\n<li>\n<b>Color:</b> Dark Beige</li>\n<li>\n<b>Composition:</b> 97% Cotton 03% Elastane</li>\n<li>\n<b>Code:</b> 4BET6R129R CBE073 264-SS26</li>\n</ul>"
+    },
+    {
+      "handle": "beverly-women-s-sweatshirt-in-chenille-jersey-1",
+      "title": "Beverly women’s sweatshirt in chenille jersey",
+      "vendor": "Mason's",
+      "product_type": "BEVERLY",
+      "tags": "BEVERLY, COLOR: Nero, COMPLETI, Donna, Felpa, FW25, GENDER: Donna, Giubbotteria, Invernale, MAIN COLLECTION: Abbigliamento, MODEL: BEVERLY, Promo FW25, SALDI30, SKU: 4GC31050 JT021-014-FW25, STYLE: Felpa, VELVET CITY",
+      "variants_count": 7,
+      "options": [
+        {
+          "name": "Italian Size",
+          "values": [
+            "38",
+            "40",
+            "42",
+            "44",
+            "46"
+          ]
+        }
+      ],
+      "metafields": null,
+      "sample_variant": {
+        "title": "38",
+        "sku": "4GC31050 JT021-014-FW25",
+        "price": "236.00",
+        "compare_at_price": "295.00",
+        "option1": "38",
+        "option2": null,
+        "option3": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "barcode": "1225000198604"
+      },
+      "body_html_snippet": "<ul>\n<li><strong>Color:</strong>&nbsp;Black</li>\n<li><strong>Composition:</strong> 85% Cotton 15% Polyester</li>\n<li><strong>Code:</strong> 4GC31050 JT021-014-FW25</li>\n</ul>"
+    },
+    {
+      "handle": "beverly-women-s-sweatshirt-in-chenille-jersey",
+      "title": "Beverly women’s sweatshirt in chenille jersey",
+      "vendor": "Mason's",
+      "product_type": "BEVERLY",
+      "tags": "BEVERLY, COLOR: Marrone Testa Di Moro, COMPLETI, Donna, Felpa, FW25, GENDER: Donna, Giubbotteria, Invernale, MAIN COLLECTION: Abbigliamento, MODEL: BEVERLY, Promo FW25, SKU: 4GC31050 JT021-045-FW25, STYLE: Felpa, VELVET CITY, ZALANDO",
+      "variants_count": 7,
+      "options": [
+        {
+          "name": "Italian Size",
+          "values": [
+            "38",
+            "40",
+            "42",
+            "44",
+            "46"
+          ]
+        }
+      ],
+      "metafields": null,
+      "sample_variant": {
+        "title": "38",
+        "sku": "4GC31050 JT021-045-FW25",
+        "price": "236.00",
+        "compare_at_price": "295.00",
+        "option1": "38",
+        "option2": null,
+        "option3": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "barcode": "1225000198673"
+      },
+      "body_html_snippet": "<ul>\n<li><strong>Color:</strong>&nbsp;Dark Brown</li>\n<li><strong>Composition:</strong> 85% Cotton 15% Polyester</li>\n<li><strong>Code:</strong> 4GC31050 JT021-045-FW25</li>\n</ul>"
+    }
+  ],
+  "collections": [
+    {
+      "handle": "accessories-1",
+      "title": "Accessories Mason's"
+    },
+    {
+      "handle": "elegant-sportswear-woman-pants",
+      "title": "Athleisure"
+    },
+    {
+      "handle": "athleisure-collection",
+      "title": "Athleisure"
+    },
+    {
+      "handle": "boston",
+      "title": "Boston"
+    },
+    {
+      "handle": "camouflage-1",
+      "title": "Camouflage Men FW22"
+    },
+    {
+      "handle": "cappotti-giubbotti-donna-30",
+      "title": "Cappotti & Giubbotti Donna -30%"
+    },
+    {
+      "handle": "cappotti-giubbotti-30",
+      "title": "Cappotti & Giubbotti Uomo -30%"
+    },
+    {
+      "handle": "carrot-fit-woman-masons-1",
+      "title": "Carrot fit"
+    },
+    {
+      "handle": "carrot-fit-pants-men",
+      "title": "Carrot Fit Mason's"
+    },
+    {
+      "handle": "chile-man-cargo-pants",
+      "title": "Chile"
+    },
+    {
+      "handle": "chile-woman-cargo-pants",
+      "title": "Chile "
+    },
+    {
+      "handle": "chile-men-bermuda",
+      "title": "Chile Bermuda"
+    },
+    {
+      "handle": "jaqueline-shorts",
+      "title": "Jaqueline Shorts"
+    },
+    {
+      "handle": "man-cargo-bermuda",
+      "title": "Man Cargo Bermuda"
+    },
+    {
+      "handle": "man-chino-bermuda",
+      "title": "Man Chino Bermuda"
+    },
+    {
+      "handle": "man-jogger-shorts",
+      "title": "Man Jogger Shorts"
+    },
+    {
+      "handle": "men-summer-blazer",
+      "title": "Man Summer Blazer"
+    },
+    {
+      "handle": "man-summer-shirts",
+      "title": "Man Summer Shirts"
+    },
+    {
+      "handle": "man-winter-coats",
+      "title": "Man Winter Coats"
+    },
+    {
+      "handle": "man-winter-denim-1",
+      "title": "Man Winter Denim"
+    },
+    {
+      "handle": "man-bermuda-shorts",
+      "title": "Men Summer Bermuda Shorts"
+    },
+    {
+      "handle": "man-winter-blazer",
+      "title": "Men Winter Blazers"
+    },
+    {
+      "handle": "mens-corduroy-trousers-the-corduroys",
+      "title": "Outerwear and Corduroy Trousers for Men"
+    },
+    {
+      "handle": "woman-summer-blazer",
+      "title": "Woman Summer Blazer"
+    },
+    {
+      "handle": "woman-summer-dresses",
+      "title": "Woman Summer Dresses"
+    },
+    {
+      "handle": "woman-winter-blazer",
+      "title": "Woman Winter Blazers"
+    },
+    {
+      "handle": "woman-winter-coats",
+      "title": "Woman Winter Coats"
+    },
+    {
+      "handle": "womens-winter-dresses",
+      "title": "Woman Winter Dresses"
+    },
+    {
+      "handle": "woman-winter-shirts",
+      "title": "Woman Winter Shirts"
+    },
+    {
+      "handle": "woman-summer-shirts",
+      "title": "Women's Summer Shirts"
+    }
+  ],
+  "total_products": 50,
+  "total_collections": 30,
+  "inferred_metafields": [
+    {
+      "owner_type": "PRODUCT",
+      "namespace": "custom",
+      "key": "composition",
+      "type": "single_line_text_field",
+      "description": "Material composition (e.g. 94% Coton 05% Polyester 01% Élasthanne)",
+      "source": "DOM observation — product page composition block"
+    },
+    {
+      "owner_type": "PRODUCT",
+      "namespace": "custom",
+      "key": "manufacturing",
+      "type": "single_line_text_field",
+      "description": "Special manufacturing process notes (e.g. Teint en pièce)",
+      "source": "DOM observation — product page manufacturing block"
+    },
+    {
+      "owner_type": "PRODUCT",
+      "namespace": "custom",
+      "key": "size_guide",
+      "type": "rich_text_field",
+      "description": "Size conversion table (IT/US/FR/DE/UK)",
+      "source": "DOM observation — product page size guide block"
+    },
+    {
+      "owner_type": "PRODUCT",
+      "namespace": "custom",
+      "key": "product_code",
+      "type": "single_line_text_field",
+      "description": "Internal product code displayed on product page",
+      "source": "DOM observation — product info block"
+    },
+    {
+      "owner_type": "PRODUCT",
+      "namespace": "custom",
+      "key": "fit",
+      "type": "single_line_text_field",
+      "description": "Fit type (extra slim, regular, slim, cargo, etc.)",
+      "source": "Inferred from collection-links section pant model descriptions"
+    },
+    {
+      "owner_type": "PRODUCT",
+      "namespace": "custom",
+      "key": "model_name",
+      "type": "single_line_text_field",
+      "description": "Model name (Milan, New York, Turin, Chile, etc.)",
+      "source": "Inferred from collection-links section showing model names"
+    },
+    {
+      "owner_type": "PRODUCT",
+      "namespace": "loox",
+      "key": "avg_rating",
+      "type": "number_decimal",
+      "description": "Loox average review rating (currently inactive/null)",
+      "source": "Site audit — MetafieldLooxRating reference in DOM"
+    },
+    {
+      "owner_type": "PRODUCT",
+      "namespace": "loox",
+      "key": "num_reviews",
+      "type": "number_integer",
+      "description": "Loox review count (currently inactive/null)",
+      "source": "Site audit — MetafieldLooxCount reference in DOM"
+    }
+  ]
+}

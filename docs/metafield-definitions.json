@@ -1,0 +1,102 @@
+{
+  "extraction_date": "2026-03-25",
+  "source_store": "us.masons.it",
+  "method": "Public .json endpoints + DOM observation + body_html analysis",
+  "notes": [
+    "Source store does NOT use product metafields for composition/fit/code — this data is embedded in product body_html as structured <ul><li> items",
+    "Metafields are null in the public JSON endpoint — source store does not expose metafields publicly",
+    "Loox review metafields exist in theme code but are inactive (all null values)",
+    "Product tags are used extensively for filtering: GENDER, MODEL, SEASON, COLOR, FIT, STYLE, COLLECTION, TYPE1/TYPE2",
+    "We define metafields in the TARGET store to properly structure data that is embedded in body_html in the source"
+  ],
+  "product_data_structure": {
+    "in_body_html": [
+      { "field": "Fit", "example": "Slim", "pattern": "<strong>Fit: </strong>VALUE" },
+      { "field": "Color", "example": "Navy Blue", "pattern": "<strong>Color: </strong>VALUE" },
+      { "field": "Composition", "example": "94% Cotton 05% Polyester-styrene 01% Elastane", "pattern": "<strong>Composition: </strong>VALUE" },
+      { "field": "Code", "example": "45T4J07J019 DTE071-006-FW25", "pattern": "<strong>Code: </strong>VALUE" }
+    ],
+    "in_tags": [
+      { "prefix": "COLOR:", "example": "COLOR: Blu Navy" },
+      { "prefix": "FIT:", "example": "FIT: RELAXED" },
+      { "prefix": "GENDER:", "example": "GENDER: Donna" },
+      { "prefix": "MODEL:", "example": "MODEL: Baltimora" },
+      { "prefix": "SEASON:", "example": "SEASON: SS26" },
+      { "prefix": "STYLE:", "example": "STYLE: Pantaloni" },
+      { "prefix": "COLLECTION:", "example": "COLLECTION: WORK" },
+      { "prefix": "MAIN COLLECTION:", "example": "MAIN COLLECTION: Abbigliamento" },
+      { "prefix": "SKU:", "example": "SKU: 4BET6R129R CBE073-264-SS26" },
+      { "prefix": "TYPE1:", "example": "TYPE1: Cargo" },
+      { "prefix": "TYPE2:", "example": "TYPE2: Denim" }
+    ],
+    "in_product_fields": {
+      "vendor": "Mason's (always)",
+      "product_type": "Varies — model name (AGNES) or category (Shorts, Camicie)",
+      "options": "Size (Italian Size or Size, values: 25-46 range)"
+    }
+  },
+  "target_metafield_definitions": [
+    {
+      "name": "Composition",
+      "namespace": "custom",
+      "key": "composition",
+      "type": "single_line_text_field",
+      "owner_type": "PRODUCT",
+      "description": "Material composition extracted from body_html (e.g. '94% Cotton 05% Polyester 01% Elastane')",
+      "pin": true
+    },
+    {
+      "name": "Product Code",
+      "namespace": "custom",
+      "key": "product_code",
+      "type": "single_line_text_field",
+      "owner_type": "PRODUCT",
+      "description": "Internal product/style code (e.g. '45T4J07J019 DTE071-006-FW25')",
+      "pin": true
+    },
+    {
+      "name": "Fit",
+      "namespace": "custom",
+      "key": "fit",
+      "type": "single_line_text_field",
+      "owner_type": "PRODUCT",
+      "description": "Fit type (Slim, Regular, Relaxed, Extra Slim, etc.)",
+      "pin": true
+    },
+    {
+      "name": "Model Name",
+      "namespace": "custom",
+      "key": "model_name",
+      "type": "single_line_text_field",
+      "owner_type": "PRODUCT",
+      "description": "Model/line name (Milan, New York, Turin, Chile, Agnes, etc.)",
+      "pin": true
+    },
+    {
+      "name": "Manufacturing",
+      "namespace": "custom",
+      "key": "manufacturing",
+      "type": "single_line_text_field",
+      "owner_type": "PRODUCT",
+      "description": "Special manufacturing process (e.g. 'Teint en pièce', 'Garment dyed')",
+      "pin": false
+    },
+    {
+      "name": "Size Guide",
+      "namespace": "custom",
+      "key": "size_guide",
+      "type": "rich_text_field",
+      "owner_type": "PRODUCT",
+      "description": "Size conversion table (IT/US/FR/DE/UK) in rich text format",
+      "pin": false
+    }
+  ],
+  "admin_api_mutations": [
+    "mutation { metafieldDefinitionCreate(definition: { name: \"Composition\", namespace: \"custom\", key: \"composition\", type: \"single_line_text_field\", ownerType: PRODUCT, pin: true }) { createdDefinition { id name } userErrors { field message } } }",
+    "mutation { metafieldDefinitionCreate(definition: { name: \"Product Code\", namespace: \"custom\", key: \"product_code\", type: \"single_line_text_field\", ownerType: PRODUCT, pin: true }) { createdDefinition { id name } userErrors { field message } } }",
+    "mutation { metafieldDefinitionCreate(definition: { name: \"Fit\", namespace: \"custom\", key: \"fit\", type: \"single_line_text_field\", ownerType: PRODUCT, pin: true }) { createdDefinition { id name } userErrors { field message } } }",
+    "mutation { metafieldDefinitionCreate(definition: { name: \"Model Name\", namespace: \"custom\", key: \"model_name\", type: \"single_line_text_field\", ownerType: PRODUCT, pin: true }) { createdDefinition { id name } userErrors { field message } } }",
+    "mutation { metafieldDefinitionCreate(definition: { name: \"Manufacturing\", namespace: \"custom\", key: \"manufacturing\", type: \"single_line_text_field\", ownerType: PRODUCT }) { createdDefinition { id name } userErrors { field message } } }",
+    "mutation { metafieldDefinitionCreate(definition: { name: \"Size Guide\", namespace: \"custom\", key: \"size_guide\", type: \"rich_text_field\", ownerType: PRODUCT }) { createdDefinition { id name } userErrors { field message } } }"
+  ]
+}
