@@ -8,227 +8,608 @@
  * ------------------------------------------------------------
  */{
   "sections": {
-    "barcoop_hero": {
-      "type": "barcoop-hero-carousel",
+    "hero_ss26": {
+      "type": "hero",
       "blocks": {
-        "slide_classic_marg": {
-          "type": "slide",
+        "heading": {
+          "type": "text",
           "settings": {
-            "title": "Classic Margarita",
-            "subtitle": "Cocktail Mixer",
-            "button_label": "Shop Now",
-            "accent_color": "#c1d544",
-            "bg_color": "#3a8075",
-            "text_color": "#fbf7e9"
+            "text": "<h1>NOUVELLE COLLECTION SS26</h1>",
+            "type_preset": "h1",
+            "max_width": "narrow",
+            "alignment": "center",
+            "color": "#ffffff",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           }
         },
-        "slide_bloody_mary": {
-          "type": "slide",
+        "tagline": {
+          "type": "text",
           "settings": {
-            "title": "Bloody Mary",
-            "subtitle": "Cocktail Mixer",
-            "button_label": "Shop Now",
-            "accent_color": "#ef4a23",
-            "bg_color": "#592f41",
-            "text_color": "#fbf7e9"
+            "text": "<p>Découvrez la nouvelle collection : passion artisanale depuis 1974</p>",
+            "type_preset": "rte",
+            "max_width": "narrow",
+            "alignment": "center",
+            "color": "#ffffff",
+            "padding-block-start": 0,
+            "padding-block-end": 16,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           }
         },
-        "slide_cucumber": {
-          "type": "slide",
+        "button_homme": {
+          "type": "button",
           "settings": {
-            "title": "Cucumber Mojito",
-            "subtitle": "Cocktail Mixer",
-            "button_label": "Shop Now",
-            "accent_color": "#3a8075",
-            "bg_color": "#3d3d3d",
-            "text_color": "#fbf7e9"
+            "label": "Homme",
+            "link": "/fr/collections/printemps-ete-homme",
+            "style_class": "button--primary"
           }
         },
-        "slide_ginger": {
-          "type": "slide",
+        "button_femme": {
+          "type": "button",
           "settings": {
-            "title": "Ginger Smash",
-            "subtitle": "Cocktail Mixer",
-            "button_label": "Shop Now",
-            "accent_color": "#765f2c",
-            "bg_color": "#f85a35",
-            "text_color": "#fbf7e9"
-          }
-        },
-        "slide_spicy": {
-          "type": "slide",
-          "settings": {
-            "title": "Spicy Strawberry Margarita",
-            "subtitle": "Cocktail Mixer",
-            "button_label": "Shop Now",
-            "accent_color": "#fa3c30",
-            "bg_color": "#c1d544",
-            "text_color": "#3d3d3d"
-          }
-        },
-        "slide_pina": {
-          "type": "slide",
-          "settings": {
-            "title": "Piña Colada",
-            "subtitle": "Cocktail Mixer",
-            "button_label": "Shop Now",
-            "accent_color": "#765f2c",
-            "bg_color": "#ffc517",
-            "text_color": "#3d3d3d"
+            "label": "Femme",
+            "link": "/fr/collections/printemps-ete-femme",
+            "style_class": "button--primary"
           }
         }
       },
-      "block_order": [
-        "slide_classic_marg",
-        "slide_bloody_mary",
-        "slide_cucumber",
-        "slide_ginger",
-        "slide_spicy",
-        "slide_pina"
-      ],
-      "settings": {}
-    },
-    "barcoop_showcase": {
-      "type": "barcoop-product-showcase",
-      "blocks": {
-        "card_classic_marg": {
-          "type": "product_card",
-          "settings": {
-            "title": "Classic Margarita",
-            "flavor": "Lime + Tangerine + Sea Salt",
-            "accent_color": "#c1d544"
-          }
-        },
-        "card_bloody_mary": {
-          "type": "product_card",
-          "settings": {
-            "title": "Bloody Mary",
-            "flavor": "Tomato + Smoked Sea Salt + Chiles",
-            "accent_color": "#ef4a23"
-          }
-        },
-        "card_cucumber": {
-          "type": "product_card",
-          "settings": {
-            "title": "Cucumber Mojito",
-            "flavor": "Cucumber + Mint + Lime",
-            "accent_color": "#3a8075"
-          }
-        },
-        "card_ginger": {
-          "type": "product_card",
-          "settings": {
-            "title": "Ginger Smash",
-            "flavor": "Ginger + Lemon + Bitters",
-            "accent_color": "#765f2c"
-          }
-        },
-        "card_spicy": {
-          "type": "product_card",
-          "settings": {
-            "title": "Spicy Strawberry Margarita",
-            "flavor": "Strawberry + Jalapeño + Lime",
-            "accent_color": "#fa3c30"
-          }
-        },
-        "card_pina": {
-          "type": "product_card",
-          "settings": {
-            "title": "Piña Colada",
-            "flavor": "Pineapple + Coconut + Lime",
-            "accent_color": "#765f2c"
-          }
-        }
-      },
-      "block_order": [
-        "card_classic_marg",
-        "card_bloody_mary",
-        "card_cucumber",
-        "card_ginger",
-        "card_spicy",
-        "card_pina"
-      ],
+      "block_order": ["heading", "tagline", "button_homme", "button_femme"],
       "settings": {
-        "heading": "Meet The Cocktail Coop",
-        "subheading": "All-natural cocktail mixers made by real bartenders",
-        "button_label": "Shop All Mixers"
+        "media_type_1": "image",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "full-width",
+        "section_height": "large",
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000040",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "padding-block-start": 40,
+        "padding-block-end": 40
       }
     },
-    "barcoop_recipes": {
-      "type": "barcoop-recipe-carousel",
+    "collection_links_models": {
+      "type": "collection-links",
+      "settings": {
+        "layout": "spotlight",
+        "section_width": "page-width",
+        "alignment": "left",
+        "image_position": "right",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "shop_the_look": {
+      "type": "shop-the-look",
       "blocks": {
-        "recipe_dark_stormy": {
-          "type": "recipe",
+        "look_mens_casual": {
+          "type": "look",
           "settings": {
-            "title": "Dark and Stormy",
-            "spirit": "Rum"
+            "look_label": "Men's Casual"
           }
         },
-        "recipe_vodka_gimlet": {
-          "type": "recipe",
+        "look_womens_tailored": {
+          "type": "look",
           "settings": {
-            "title": "Vodka Gimlet",
-            "spirit": "Vodka"
+            "look_label": "Women's Tailored"
           }
         },
-        "recipe_virgin_pina": {
-          "type": "recipe",
+        "look_mens_workwear": {
+          "type": "look",
           "settings": {
-            "title": "Virgin Piña Colada",
-            "spirit": "Non-Alcoholic"
+            "look_label": "Men's Workwear"
           }
         },
-        "recipe_spicy_soda": {
-          "type": "recipe",
+        "look_womens_cargo": {
+          "type": "look",
           "settings": {
-            "title": "Spicy Strawberry Lime Soda",
-            "spirit": "Non-Alcoholic"
+            "look_label": "Women's Cargo"
           }
         },
-        "recipe_spicy_marg": {
-          "type": "recipe",
+        "look_womens_knit": {
+          "type": "look",
           "settings": {
-            "title": "Spicy Strawberry Margarita",
-            "spirit": "Tequila"
+            "look_label": "Women's Knit"
           }
         },
-        "recipe_perfect_pina": {
-          "type": "recipe",
+        "look_mixed_casual": {
+          "type": "look",
           "settings": {
-            "title": "Perfect Piña Colada",
-            "spirit": "Rum"
+            "look_label": "Mixed Casual"
           }
         }
       },
       "block_order": [
-        "recipe_dark_stormy",
-        "recipe_vodka_gimlet",
-        "recipe_virgin_pina",
-        "recipe_spicy_soda",
-        "recipe_spicy_marg",
-        "recipe_perfect_pina"
+        "look_mens_casual",
+        "look_womens_tailored",
+        "look_mens_workwear",
+        "look_womens_cargo",
+        "look_womens_knit",
+        "look_mixed_casual"
       ],
       "settings": {
-        "heading": "Recipes",
-        "button_label": "View All Recipes"
+        "heading": "SHOP THE LOOK",
+        "subheading": "",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
       }
     },
-    "barcoop_newsletter": {
-      "type": "barcoop-newsletter",
+    "product_list_homme_ss26": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h2>HOMME SS26 NOUVEAUTÉS</h2>",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "0.05em",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "product_list_button": {
+              "type": "_product-list-button",
+              "settings": {
+                "label": "DÉCOUVREZ LA NOUVELLE COLLECTION",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              }
+            }
+          },
+          "block_order": ["product_list_text", "product_list_button"]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product-card-gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "adapt",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "product_title": {
+              "type": "product-title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            }
+          },
+          "block_order": ["product-card-gallery", "product_title", "price"]
+        }
+      },
+      "block_order": [],
       "settings": {
-        "heading": "Stay in the Coop",
-        "subheading": "Get exclusive recipes, news, and offers delivered to your inbox.",
-        "placeholder": "Enter your email",
-        "button_label": "Sign Up",
-        "bg_color": "#3a8075",
-        "text_color": "#fbf7e9"
+        "collection": "",
+        "max_products": 8,
+        "layout_type": "carousel",
+        "carousel_on_mobile": false,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "mobile_card_size": "60cqw",
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "product_list_femme_ss26": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h2>FEMME SS26 NOUVEAUTÉS</h2>",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "0.05em",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "product_list_button": {
+              "type": "_product-list-button",
+              "settings": {
+                "label": "DÉCOUVREZ LA NOUVELLE COLLECTION",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              }
+            }
+          },
+          "block_order": ["product_list_text", "product_list_button"]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product-card-gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "adapt",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "product_title": {
+              "type": "product-title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            }
+          },
+          "block_order": ["product-card-gallery", "product_title", "price"]
+        }
+      },
+      "block_order": [],
+      "settings": {
+        "collection": "",
+        "max_products": 12,
+        "layout_type": "carousel",
+        "carousel_on_mobile": false,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "mobile_card_size": "60cqw",
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "image_with_text_about": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "space-between"
+          },
+          "blocks": {
+            "pillars": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Authentique · Libre · Élégant</p>",
+                "type_preset": "h6"
+              }
+            },
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>TRADITION ARTISANALE DEPUIS 1974</h2>",
+                "type_preset": "h3"
+              }
+            },
+            "body": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Giorgio transformed Vilmo Martini's tailoring workshop in Carrara into Mason's. Tradition artisanale et innovation.</p>",
+                "max_width": "narrow",
+                "type_preset": "rte"
+              }
+            },
+            "button": {
+              "type": "button",
+              "settings": {
+                "label": "ABOUT US",
+                "link": "/fr/pages/about-us",
+                "style_class": "link"
+              }
+            }
+          },
+          "block_order": ["pillars", "heading", "body", "button"]
+        }
+      },
+      "settings": {
+        "media_position": "left",
+        "media_width": "medium",
+        "media_height": "60svh",
+        "section_width": "full-width",
+        "extend_media": true,
+        "color_scheme": "scheme-3",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "image_with_text_personal_shopper": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>PERSONAL SHOPPER FOR YOU</h2>",
+                "type_preset": "h3"
+              }
+            },
+            "body": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Dedicated video call in Italian or English, personalized advice, purchase immediately or review at leisure.</p>",
+                "max_width": "narrow",
+                "type_preset": "rte"
+              }
+            },
+            "button": {
+              "type": "button",
+              "settings": {
+                "label": "BOOK ON WHATSAPP",
+                "link": "",
+                "style_class": "button--primary"
+              }
+            }
+          },
+          "block_order": ["heading", "body", "button"]
+        }
+      },
+      "settings": {
+        "media_position": "right",
+        "media_width": "medium",
+        "media_height": "60svh",
+        "section_width": "full-width",
+        "extend_media": true,
+        "color_scheme": "scheme-4",
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     }
   },
   "order": [
-    "barcoop_hero",
-    "barcoop_showcase",
-    "barcoop_recipes",
-    "barcoop_newsletter"
+    "hero_ss26",
+    "collection_links_models",
+    "shop_the_look",
+    "product_list_homme_ss26",
+    "product_list_femme_ss26",
+    "image_with_text_about",
+    "image_with_text_personal_shopper"
   ]
 }
