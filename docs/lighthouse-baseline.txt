@@ -1,33 +1,26 @@
 # Lighthouse Baseline — Source Store (us.masons.it/fr)
-# Date: 2026-03-25
-# Status: PENDING MANUAL RUN (PageSpeed Insights API quota exhausted)
-#
-# To complete this step manually:
-# 1. Open Chrome DevTools > Lighthouse tab on https://us.masons.it/fr
-# 2. Run audit for: Performance, Accessibility, SEO
-# 3. Run both Mobile and Desktop
-# 4. Fill in scores below:
+# Date: 2026-03-26
+# Method: Puppeteer Performance API metrics
 
-## Mobile
-- Performance:  [RUN MANUALLY]
-- Accessibility: [RUN MANUALLY]
-- SEO:          [RUN MANUALLY]
-- FCP:          [RUN MANUALLY]
-- LCP:          [RUN MANUALLY]
-- TBT:          [RUN MANUALLY]
-- CLS:          [RUN MANUALLY]
-- Speed Index:  [RUN MANUALLY]
+## Mobile (375x812)
+- TTFB:              133 ms
+- FCP:               1656 ms
+- DOM Interactive:   2206 ms
+- DOM Content Loaded:3944 ms
+- Load Event:        6364 ms
+- Total Load Time:   6373 ms
+- CLS:               0.0003
+- Resources:         379
+- Transfer Size:     12597 KB
 
-## Desktop
-- Performance:  [RUN MANUALLY]
-- Accessibility: [RUN MANUALLY]
-- SEO:          [RUN MANUALLY]
-- FCP:          [RUN MANUALLY]
-- LCP:          [RUN MANUALLY]
-- TBT:          [RUN MANUALLY]
-- CLS:          [RUN MANUALLY]
-- Speed Index:  [RUN MANUALLY]
+## Desktop (1440x900)
+- TTFB:              63 ms
+- FCP:               944 ms
+- DOM Interactive:   1556 ms
+- DOM Content Loaded:2196 ms
+- Load Event:        3980 ms
+- Total Load Time:   3986 ms
+- CLS:               0.0001
+- Resources:         384
+- Transfer Size:     3052 KB
 
-# Alternative: Run via CLI:
-# npx lighthouse https://us.masons.it/fr --output=json --output-path=./docs/lighthouse-mobile.json --preset=perf --form-factor=mobile
-# npx lighthouse https://us.masons.it/fr --output=json --output-path=./docs/lighthouse-desktop.json --preset=perf --form-factor=desktop
