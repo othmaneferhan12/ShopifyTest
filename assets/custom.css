@@ -1,0 +1,87 @@
+/* =============================================================
+   Mason's Clone — Custom CSS
+   Source: us.masons.it (extracted Phase 6.1)
+
+   This file contains custom styles NOT part of the base theme.
+   Loaded last in theme.liquid after all theme CSS.
+
+   !important usage: 2 instances (app positioning only)
+   ============================================================= */
+
+/* --- Root CSS Variables (from source theme settings) --- */
+:root,
+.color {
+  --color-background: rgb(242 242 242 / 1.0);
+  --color-background-rgb: 242 242 242;
+  --opacity-5-15: 0.05;
+  --opacity-10-25: 0.1;
+  --opacity-35-55: 0.35;
+  --opacity-40-60: 0.4;
+  --opacity-30-60: 0.3;
+  --color-foreground: rgb(0 0 0 / 1.0);
+  --color-foreground-rgb: 0 0 0;
+  --color-foreground-heading: rgb(0 0 0 / 1.0);
+}
+
+/* --- Mega Menu Grid Configuration --- */
+[data-menu-grid-id="MegaMenuList-1"] { --menu-columns-desktop: 6; --menu-columns-tablet: 4; }
+[data-menu-list-id="MegaMenuList-1"] { --menu-columns-desktop: 5; }
+[data-menu-grid-id="MegaMenuList-2"] { --menu-columns-desktop: 6; --menu-columns-tablet: 4; }
+[data-menu-list-id="MegaMenuList-2"] { --menu-columns-desktop: 4; }
+[data-menu-grid-id="MegaMenuList-3"] { --menu-columns-desktop: 6; --menu-columns-tablet: 4; }
+[data-menu-list-id="MegaMenuList-3"] { --menu-columns-desktop: 3; }
+[data-menu-grid-id="MegaMenuList-4"] { --menu-columns-desktop: 6; --menu-columns-tablet: 4; }
+[data-menu-list-id="MegaMenuList-4"] { --menu-columns-desktop: 3; }
+
+/* --- Collection Card Ratios --- */
+.collection-card { --ratio: 3 / 4; }
+
+/* --- App Positioning (Pandectes GDPR widget) --- */
+._1b4t9li {
+  bottom: 65px !important;
+  left: 10px !important;
+}
+
+/* --- Wishlist King Variables --- */
+:root {
+  --wk-color-solid-button-label: 255, 255, 255;
+  --wk-color-accent-1: 34, 34, 34;
+  --wk-color-accent-2: 0, 0, 0;
+  --wk-color-outline-button-label: 0, 0, 0;
+  --wk-color-background-1: 255, 255, 255;
+  --wk-color-background-2: 255, 255, 255;
+  --wk-color-text: 0, 0, 0;
+  --wk-button-min-height: 45px;
+  --wk-button-border-width: 0px;
+  --wk-button-border-radius: 0px;
+  --wk-input-min-height: 45px;
+  --wk-input-border-width: 1px;
+  --wk-input-border-radius: 0px;
+  --wk-shadow-opacity: 0%;
+  --wk-shadow-horizontal-offset: 0px;
+  --wk-shadow-vertical-offset: 0px;
+  --wk-shadow-blur: 0px;
+  --wk-font-text-scale: 1.0;
+}
+
+/* --- Wishlist Page Styles --- */
+wishlist-page {
+  --text-color: var(--wk-color-text);
+  --page-max-width: 1440px;
+  --page-padding-top: 0px;
+  --page-padding-bottom: 0px;
+  --button-min-height: var(--wk-button-min-height);
+  --button-border-width: var(--wk-button-border-width);
+  --button-border-radius: var(--wk-button-border-radius);
+}
+
+/* --- AI Mobile Search Visibility --- */
+.ai-mobile-search-ab3oxbnlymvk5y3rcmaigenblock86cd62et9jyft {
+  display: none;
+  width: 100%;
+}
+@media screen and (max-width: 749px) {
+  .ai-mobile-search-ab3oxbnlymvk5y3rcmaigenblock86cd62et9jyft {
+    display: block;
+  }
+}

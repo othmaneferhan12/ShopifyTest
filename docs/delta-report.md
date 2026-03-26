@@ -131,3 +131,45 @@ Target store domain: `shoopify-test.myshopify.com`
 - For production: configure a custom sending domain (e.g., `noreply@[yourdomain].com`)
 - Verify SPF, DKIM, DMARC DNS records for the sending domain
 - Configure in admin > Settings > Notifications > Sender email
+
+---
+
+## Phase 6 — Custom Code & Interactions
+
+### Phase 6.1 — Custom CSS
+- **External stylesheets**: 2 (Shopify portable-wallets CSS + compiled theme `styles.css`)
+- **Inline style blocks**: 49 (root variables, font-face, menu grid config, collection ratios, app styles)
+- **`!important` usage**: 2 instances only (Pandectes GDPR widget positioning)
+- **CSP header**: `block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;`
+- **Custom CSS consolidated into**: `assets/custom.css`
+
+### Phase 6.2 — Custom JavaScript
+- **No external JS libraries** — source uses 100% custom code (confirmed Phase 0.1)
+- **Theme JS modules**: 24 custom web component modules (critical.js, component.js, scrolling.js, etc.)
+- **Third-party scripts**: Klaviyo, Trustpilot, Triple Whale, Pandectes, WishlistKing, PayPal, Klarna
+- **Custom JS consolidated into**: `assets/custom.js` (UTM capture for cart attributes)
+- **Performance**: custom.js < 1KB gzipped (well under 30KB target)
+
+### Phase 6.3 — Animations
+- **No animation libraries** — source uses CSS-native animations only
+- Native `scrollTo`, `ResizeObserver`, CSS `scroll-snap`, CSS `maskImage` gradients
+- CSS transitions for hover states, accordions, dialogs
+- No AOS, GSAP, Swiper, or any third-party animation library to replicate
+
+### Phase 6.4 — Shopify Functions
+- **Cart discount logic**: `cart-discount.js` detected — may indicate custom discount function
+- **No evidence of**: shipping rate filtering, payment method filtering, or cart transformation
+- **Action required**: Check source store admin for installed Shopify Functions apps. If custom discount functions exist, they require separate app deployment on target store.
+
+### Phase 6.5 — Interaction Checklist
+
+| Component | Status | Notes |
+|---|---|---|
+| Carousels | DOCUMENTED | `slideshow.js` — CSS scroll-snap based, no external library |
+| Accordions | DOCUMENTED | `accordion-custom.js` — custom web component |
+| Modals/Popups | DOCUMENTED | `dialog.js` + `floating-panel.js` — custom implementation |
+| Cart drawer | DOCUMENTED | `cart-drawer.js` + `drawer-toggle.js` — slide-in drawer |
+| Header | DOCUMENTED | `header.js` — sticky/shrink behavior, custom scroll handling |
+| Hover states | DOCUMENTED | CSS-only, no JS hover effects |
+| Form validations | DOCUMENTED | `product-form.js` — native validation |
+| App blocks | PARTIAL | Klaviyo, Trustpilot, WishlistKing, Pandectes need app installation on target |
